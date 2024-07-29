@@ -19,7 +19,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Libraries Stylesheet -->
     <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
     <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet"/>
@@ -35,43 +35,41 @@
         <div class="row">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
                     <p class="text-body px-3">|</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-3" href="">
+                    <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a class="text-primary px-3" href="">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="text-primary px-3" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
+<a class="text-primary px-3" href="https://vk.com/id845402373">
+    <i class="fab fa-vk"></i>
+</a>
+                    <a class="text-primary px-3" href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-primary pl-3" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+<a class="text-primary px-3" href="https://t.me/">
+    <i class="fab fa-telegram-plane"></i>
+</a>
                     <div class="multilang-wrap">
                         <ul class="wpm-language-switcher switcher-list">
-                            <li class="item-language-uz active">
-							<span data-lang="uz">
-												<img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/uz.png"
-                                                     alt="Uz">
-													<span>Uz</span>
-											</span>
+                            <li class="item-language-en ">
+                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
+												<img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/en.png"
+                                                     alt="En">
+													<span>En</span>
                             </li>
                             <li class="item-language-ru">
-                                <a href="https://www.dolores.uz" data-lang="ru">
+                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
                                     <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/ru.png"
                                          alt="Ru">
                                     <span>Ru</span>
-                                </a>
                             </li>
                         </ul>
                     </div>
@@ -99,11 +97,11 @@
                        class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">{% blocktrans %}
                         Home {% endblocktrans %}</a>
                     <a href="{% url 'about' %}"
-                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">About</a>
+                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}About{% endblocktrans %}</a>
                     <a href="{% url 'services' %}"
-                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">Services</a>
-                    <a href="{% url 'packages' %}" class="nav-item nav-link">Tour Packages</a>
-                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}Services{% endblocktrans %}</a>
+                    <a href="{% url 'packages' %}" class="nav-item nav-link">{% blocktrans %}Tour Packages{% endblocktrans %}</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">{% blocktrans %}Contact{% endblocktrans %}</a>
                 </div>
             </div>
         </nav>
@@ -120,9 +118,9 @@
                 <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                        <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
+                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Your guide to Central Asia{% endblocktrans %}</h1>
+                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book Now{% endblocktrans %}</a>
                     </div>
                 </div>
             </div>
@@ -130,9 +128,9 @@
                 <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                        <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
+                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Discover the history of Central Asia with Silk Route{% endblocktrans %}</h1>
+                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book Now{% endblocktrans %}</a>
                     </div>
                 </div>
             </div>
@@ -153,59 +151,59 @@
 
 
 <!-- Booking Start -->
-<div class="container-fluid booking mt-5 pb-5">
-    <div class="container pb-5">
-        <div class="bg-light shadow" style="padding: 30px;">
-            <div class="row align-items-center" style="min-height: 60px;">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Destination</option>
-                                    <option value="1">Destination 1</option>
-                                    <option value="2">Destination 1</option>
-                                    <option value="3">Destination 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control p-4 datetimepicker-input"
-                                           placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <div class="date" id="date2" data-target-input="nearest">
-                                    <input type="text" class="form-control p-4 datetimepicker-input"
-                                           placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Duration</option>
-                                    <option value="1">Duration 1</option>
-                                    <option value="2">Duration 1</option>
-                                    <option value="3">Duration 1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">
-                        Submit
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{#<div class="container-fluid booking mt-5 pb-5">#}
+{#    <div class="container pb-5">#}
+{#        <div class="bg-light shadow" style="padding: 30px;">#}
+{#            <div class="row align-items-center" style="min-height: 60px;">#}
+{#                <div class="col-md-10">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-3">#}
+{#                            <div class="mb-3 mb-md-0">#}
+{#                                <select class="custom-select px-4" style="height: 47px;">#}
+{#                                    <option selected>Destination</option>#}
+{#                                    <option value="1">Destination 1</option>#}
+{#                                    <option value="2">Destination 1</option>#}
+{#                                    <option value="3">Destination 1</option>#}
+{#                                </select>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-3">#}
+{#                            <div class="mb-3 mb-md-0">#}
+{#                                <div class="date" id="date1" data-target-input="nearest">#}
+{#                                    <input type="text" class="form-control p-4 datetimepicker-input"#}
+{#                                           placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-3">#}
+{#                            <div class="mb-3 mb-md-0">#}
+{#                                <div class="date" id="date2" data-target-input="nearest">#}
+{#                                    <input type="text" class="form-control p-4 datetimepicker-input"#}
+{#                                           placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-3">#}
+{#                            <div class="mb-3 mb-md-0">#}
+{#                                <select class="custom-select px-4" style="height: 47px;">#}
+{#                                    <option selected>Duration</option>#}
+{#                                    <option value="1">Duration 1</option>#}
+{#                                    <option value="2">Duration 1</option>#}
+{#                                    <option value="3">Duration 1</option>#}
+{#                                </select>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-2">#}
+{#                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">#}
+{#                        Submit#}
+{#                    </button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 <!-- Booking End -->
 
 
@@ -221,38 +219,33 @@
             </div>
             <div class="col-lg-6 pt-5 pb-lg-5">
                 <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                    <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
-                    <p>SILKROUTE приглашает вас настоящими уникальными впечатлениями от Востока, предлагая глубокое
-                        погружение в традиции и историю тысячилетий.
-
-                        Мы готовы предложить вам незабываемый отдых с посещением жемчужин Средней Азии, таких как
-                        Самарканд, Бухара и Хива. Наша профессиональная команда гарантирует высококачественное
-                        обслуживание и помогает понять нашу культуру, историю и географию.
-
-                        Мы предлагаем широкий спектр услуг:
-
-                        - Экскурсии по городам Великого Шелкового Пути: Ташкент, Самарканд, Бухара, Хива и другие
-                        исторические места в сопровождении опытных гидов.
-                        - Визовую поддержку.
-                        - Бронирование гостиниц разного уровня комфорта.
-                        - Аренду транспортных средств различных классов.
-                        - Бронирование авиа и железнодорожных билетов.
-                        - Прием детских и студенческих групп на праздники.
-                        - Участие в различных фестивалях, проводимых в Узбекистане.
-                        - Планирование различных туров: вело-путешествия, фото-туры, экологические туры и многое другое.
-
-                        Наши гиды высококвалифицированы, надежны и обладают всеми необходимыми человеческими качествами.
-                        Они владеют множеством иностранных языков — турецким, русским, английским, французским,
-                        немецким, испанским, итальянским, японским и др.
-
-                        Экскурсии, предлагаемые нашими специалистами, разработаны индивидуально с учетом интересных
-                        исторических фактов, не придерживаясь стандартных шаблонов.
-
-                        Наши гиды и переводчики хорошо знакомы с историей региона, культурой и традициями местного
-                        населения. Они будут рассказывать вам легенды и истории, погружая в волшебную атмосферу Востока.
-
-                        Присоединяйтесь к нам и ощутите уникальные красоты Узбекистана вместе с SILKROUTE!</p>
+                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}About Us{% endblocktrans %}</h6>
+                    <h1 class="mb-3">{% blocktrans %}We Provide Best Tour Packages In Your Budget{% endblocktrans %}</h1>
+                    <p>{% blocktrans %}
+                        SILKROUTE invites you to a truly unique experience of the East, offering a deep dive into the traditions
+                        and history of thousands of years. We are ready to offer you an unforgettable holiday with a visit to the pearls
+                        of Central Asia, such as Samarkand, Bukhara and Khiva. Our professional team guarantees high-quality service and
+                        helps to understand our culture, history and geography. We offer a wide range of services:
+                        <br>
+                        - Excursions to the cities
+                        of the Great Silk Road: Tashkent, Samarkand, Bukhara, Khiva and other historical places accompanied by experienced guides.
+                        <br>
+                        - Visa support. - Booking hotels of different levels of comfort. - Rent of vehicles of various classes.
+                        <br>
+                        - Booking air and train tickets. - Reception of children's and student groups for holidays.
+                        <br>
+                        - Participation in various festivals held in Uzbekistan.
+                        <br>
+                        - Planning various tours: bike trips, photo tours, eco-tours and much more.
+                        <br>
+                        Our guides are highly qualified, reliable and have all the necessary human qualities.
+                        They speak many foreign languages ​​- Turkish, Russian, English, French, German, Spanish, Italian,
+                        Japanese, etc. The excursions offered by our specialists are designed individually taking into account
+                        interesting historical facts, without adhering to standard templates. Our guides and translators are well
+                        acquainted with the history of the region, the culture and traditions of the local population.
+                        They will tell you legends and stories, immersing you in the magical atmosphere of the East.
+                        Join us and experience the unique beauty of Uzbekistan with SILKROUTE!
+                    {% endblocktrans %}</p>
                     <div class="row mb-4">
                         <div class="col-6">
                             <img class="img-fluid" src="{% static 'img/about_1.png' %}" alt="">
@@ -281,8 +274,9 @@
                         <i class="fa fa-2x fa-money-check-alt text-white"></i>
                     </div>
                     <div class="d-flex flex-column">
-                        <h5 class="">Competitive Pricing</h5>
-                        <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                        <h5 class="">{% blocktrans %}Competitive Pricing{% endblocktrans %}</h5>
+                        <p class="m-0">{% blocktrans %}Get the best value for your money with our competitive pricing on hotel bookings.
+                            We work tirelessly to bring you the most attractive rates, ensuring you can enjoy your stay without breaking the bank.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -293,8 +287,9 @@
                         <i class="fa fa-2x fa-award text-white"></i>
                     </div>
                     <div class="d-flex flex-column">
-                        <h5 class="">Best Services</h5>
-                        <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                        <h5 class="">{% blocktrans %}Best Services{% endblocktrans %}</h5>
+                        <p class="m-0">{% blocktrans %}Experience top-notch customer service from the moment you book until the end of your stay.
+                            Our dedicated support team is available 24/7 to assist with any questions or concerns, ensuring a seamless and enjoyable experience.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -305,8 +300,9 @@
                         <i class="fa fa-2x fa-globe text-white"></i>
                     </div>
                     <div class="d-flex flex-column">
-                        <h5 class="">Worldwide Coverage</h5>
-                        <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                        <h5 class="">{% blocktrans %}Cultural and Historical Stays{% endblocktrans %}</h5>
+                        <p class="m-0">{% blocktrans %}Immerse yourself in history and culture with our unique accommodations located in historical buildings and cultural hotspots.
+                            Enjoy a stay in a Mausoleum, a Mosque, or a boutique hotel in the heart of a vibrant cultural district.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -388,32 +384,35 @@
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-            <h1>Tours & Travel Services</h1>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}Services{% endblocktrans %}</h6>
+            <h1>{% blocktrans %}Tours & Travel Services{% endblocktrans %}</h1>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                    <h5 class="mb-2">Travel Guide</h5>
-                    <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet
-                        labore</p>
+                    <h5 class="mb-2">{% blocktrans %}Travel Guide{% endblocktrans %}</h5>
+                    <p class="m-0">{% blocktrans %}Embark on an unforgettable journey with our expertly crafted travel guide,
+                        designed to inspire and inform every traveler. From the bustling cities to serene landscapes,
+                        our guide covers the world's most breathtaking destinations with insider tips, must-see attractions, and hidden gems.{% endblocktrans %}</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                    <h5 class="mb-2">Ticket Booking</h5>
-                    <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet
-                        labore</p>
+                    <h5 class="mb-2">{% blocktrans %}Ticket Booking{% endblocktrans %}</h5>
+                    <p class="m-0">{% blocktrans %}Secure your journey with ease using our seamless ticket booking service. Whether you're planning
+                        a quick getaway or a long-haul adventure, our platform offers a hassle-free experience to book flights,
+                        trains, and bus tickets at the best prices.{% endblocktrans %}</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                    <h5 class="mb-2">Hotel Booking</h5>
-                    <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet
-                        labore</p>
+                    <h5 class="mb-2">{% blocktrans %}Hotel Booking{% endblocktrans %}</h5>
+                    <p class="m-0">{% blocktrans %}Find the perfect place to rest and recharge with our comprehensive hotel booking service.
+                        From luxurious resorts to cozy bed and breakfasts, our platform offers a wide range of accommodations
+                        to suit every traveler's needs and preferences.{% endblocktrans %}</p>
                 </div>
             </div>
         </div>
@@ -426,8 +425,8 @@
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
-            <h1>Pefect Tour Packages</h1>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}Packages{% endblocktrans %}</h6>
+            <h1>{% blocktrans %}Perfect Tour Packages{% endblocktrans %}</h1>
         </div>
         <div class="row">
             {% for package in package_list %}
@@ -443,7 +442,7 @@
                                         class="fa fa-calendar-alt text-primary mr-2"></i>{{ package.duration }}</small>
                                 {#                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>#}
                             </div>
-                            <a class="h5 text-decoration-none" href="">{{ package.name }}</a>
+                            <a class="h5 text-decoration-none" href="{% url 'package-detail' package.pk %}">{{ package.name }}</a>
                             {#                            <div class="border-top mt-4 pt-4">#}
                             {#                                <div class="d-flex justify-content-between">#}
                             {#                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>#}
@@ -462,199 +461,92 @@
 <!-- Packages End -->
 
 
-<!-- Registration Start -->
-<div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-                <div class="mb-4">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
-                    <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
-                </div>
-                <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum
-                    ut sed eos,
-                    ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                    dolor</p>
-                <ul class="list-inline text-white m-0">
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                </ul>
-            </div>
-            <div class="col-lg-5">
-                <div class="card border-0">
-                    <div class="card-header bg-primary text-center p-4">
-                        <h1 class="text-white m-0">Sign Up Now</h1>
-                    </div>
-                    <div class="card-body rounded-bottom bg-white p-5">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control p-4" placeholder="Your name"
-                                       required="required"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control p-4" placeholder="Your email"
-                                       required="required"/>
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Select a destination</option>
-                                    <option value="1">destination 1</option>
-                                    <option value="2">destination 1</option>
-                                    <option value="3">destination 1</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Registration End -->
-
 
 <!-- Team Start -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
-            <h1>Our Travel Guides</h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                <div class="team-item bg-white mb-4">
-                    <div class="team-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <h5 class="text-truncate">Guide Name</h5>
-                        <p class="m-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                <div class="team-item bg-white mb-4">
-                    <div class="team-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <h5 class="text-truncate">Guide Name</h5>
-                        <p class="m-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                <div class="team-item bg-white mb-4">
-                    <div class="team-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{% static 'img/team-3.jpg' %}" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <h5 class="text-truncate">Guide Name</h5>
-                        <p class="m-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                <div class="team-item bg-white mb-4">
-                    <div class="team-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{% static 'img/team-4.jpg' %}" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <h5 class="text-truncate">Guide Name</h5>
-                        <p class="m-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{#<div class="container-fluid py-5">#}
+{#    <div class="container pt-5 pb-3">#}
+{#        <div class="text-center mb-3 pb-3">#}
+{#            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>#}
+{#            <h1>Our Travel Guides</h1>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">#}
+{#                <div class="team-item bg-white mb-4">#}
+{#                    <div class="team-img position-relative overflow-hidden">#}
+{#                        <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">#}
+{#                        <div class="team-social">#}
+{#                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="text-center py-4">#}
+{#                        <h5 class="text-truncate">Guide Name</h5>#}
+{#                        <p class="m-0">Designation</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 <!-- Team End -->
 
 
 <!-- Testimonial Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-            <h1>What Say Our Clients</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel">
-            <div class="text-center pb-4">
-                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-1.jpg' %}"
-                     style="width: 100px; height: 100px;">
-                <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                        labore diam
-                    </p>
-                    <h5 class="text-truncate">Client Name</h5>
-                    <span>Profession</span>
-                </div>
-            </div>
-            <div class="text-center">
-                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-2.jpg' %}"
-                     style="width: 100px; height: 100px;">
-                <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                        labore diam
-                    </p>
-                    <h5 class="text-truncate">Client Name</h5>
-                    <span>Profession</span>
-                </div>
-            </div>
-            <div class="text-center">
-                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-3.jpg' %}"
-                     style="width: 100px; height: 100px;">
-                <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                        labore diam
-                    </p>
-                    <h5 class="text-truncate">Client Name</h5>
-                    <span>Profession</span>
-                </div>
-            </div>
-            <div class="text-center">
-                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-4.jpg' %}"
-                     style="width: 100px; height: 100px;">
-                <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                        labore diam
-                    </p>
-                    <h5 class="text-truncate">Client Name</h5>
-                    <span>Profession</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+{#<div class="container-fluid py-5">#}
+{#    <div class="container py-5">#}
+{#        <div class="text-center mb-3 pb-3">#}
+{#            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>#}
+{#            <h1>What Say Our Clients</h1>#}
+{#        </div>#}
+{#        <div class="owl-carousel testimonial-carousel">#}
+{#            <div class="text-center pb-4">#}
+{#                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-1.jpg' %}"#}
+{#                     style="width: 100px; height: 100px;">#}
+{#                <div class="testimonial-text bg-white p-4 mt-n5">#}
+{#                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos#}
+{#                        labore diam#}
+{#                    </p>#}
+{#                    <h5 class="text-truncate">Client Name</h5>#}
+{#                    <span>Profession</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="text-center">#}
+{#                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-2.jpg' %}"#}
+{#                     style="width: 100px; height: 100px;">#}
+{#                <div class="testimonial-text bg-white p-4 mt-n5">#}
+{#                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos#}
+{#                        labore diam#}
+{#                    </p>#}
+{#                    <h5 class="text-truncate">Client Name</h5>#}
+{#                    <span>Profession</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="text-center">#}
+{#                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-3.jpg' %}"#}
+{#                     style="width: 100px; height: 100px;">#}
+{#                <div class="testimonial-text bg-white p-4 mt-n5">#}
+{#                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos#}
+{#                        labore diam#}
+{#                    </p>#}
+{#                    <h5 class="text-truncate">Client Name</h5>#}
+{#                    <span>Profession</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="text-center">#}
+{#                <img class="img-fluid mx-auto" src="{% static 'img/testimonial-4.jpg' %}"#}
+{#                     style="width: 100px; height: 100px;">#}
+{#                <div class="testimonial-text bg-white p-4 mt-n5">#}
+{#                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos#}
+{#                        labore diam#}
+{#                    </p>#}
+{#                    <h5 class="text-truncate">Client Name</h5>#}
+{#                    <span>Profession</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<!-- Testimonial End -->#}
 
 
 <!-- Blog Start -->
@@ -735,55 +627,53 @@
             <a href="{% url 'index' %}" class="navbar-brand">
                 <img src="{% static 'img/newlogo_3.png' %}" style="width: 200px; height: 50px">
             </a>
-            <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero
-                lorem dolor dolor</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+            <p>{% blocktrans %}Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys across the globe.
+                Named after the legendary Silk Road, our agency embodies the spirit of exploration,
+                adventure, and cultural exchange. Whether you're seeking historical wonders, natural beauty,
+                or vibrant cultures, we are here to make your travel dreams a reality.{% endblocktrans %}</p>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">{% blocktrans %}Follow Us{% endblocktrans %}</h6>
             <div class="d-flex justify-content-start">
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/silkroute.uz"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Our Services{% endblocktrans %}</h5>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}About{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Destination{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Services{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Packages{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Guides{% endblocktrans %}</a>
+                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Blog{% endblocktrans %}</a>
             </div>
         </div>
+{#        <div class="col-lg-3 col-md-6 mb-5">#}
+{#            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>#}
+{#            <div class="d-flex flex-column justify-content-start">#}
+{#                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>#}
+{#                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>#}
+{#                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>#}
+{#                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>#}
+{#            </div>#}
+{#        </div>#}
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Contact Us{% endblocktrans %}</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+            <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
+            <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
             <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-            <div class="w-100">
-                <div class="input-group">
-                    <input type="text" class="form-control border-light" style="padding: 25px;"
-                           placeholder="Your Email">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary px-3">Sign Up</button>
-                    </div>
-                </div>
-            </div>
+{#            <div class="w-100">#}
+{#                <div class="input-group">#}
+{#                    <input type="text" class="form-control border-light" style="padding: 25px;"#}
+{#                           placeholder="Your Email">#}
+{#                    <div class="input-group-append">#}
+{#                        <button class="btn btn-primary px-3">Sign Up</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
         </div>
     </div>
 </div>
@@ -791,13 +681,13 @@
      style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
+            <p class="m-0 text-white-50">Copyright &copy; <a href="{% url 'index' %}">silkroute.uz</a>. All Rights Reserved.</a>
             </p>
         </div>
-        <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-            </p>
-        </div>
+{#        <div class="col-lg-6 text-center text-md-right">#}
+{#            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>#}
+{#            </p>#}
+{#        </div>#}
     </div>
 </div>
 <!-- Footer End -->

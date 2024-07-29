@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,28 +35,45 @@
         <div class="row">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
                     <p class="text-body px-3">|</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-3" href="">
+                    <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a class="text-primary px-3" href="">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="text-primary px-3" href="">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a class="text-primary px-3" href="https://vk.com/id845402373">
+                        <i class="fab fa-vk"></i>
                     </a>
-                    <a class="text-primary px-3" href="">
+                    <a class="text-primary px-3"
+                       href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-primary pl-3" href="">
-                        <i class="fab fa-youtube"></i>
+                    <a class="text-primary px-3" href="https://t.me/">
+                        <i class="fab fa-telegram-plane"></i>
                     </a>
+                    <div class="multilang-wrap">
+                        <ul class="wpm-language-switcher switcher-list">
+                            <li class="item-language-en ">
+                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
+                                <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/en.png"
+                                     alt="En">
+                                <span>En</span>
+                            </li>
+                            <li class="item-language-ru">
+                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
+                                <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/ru.png"
+                                     alt="Ru">
+                                <span>Ru</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,13 +95,13 @@
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
                     <a href="{% url 'index' %}"
-                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">Home</a>
+                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">{% blocktrans %}Home{% endblocktrans %}</a>
                     <a href="{% url 'about' %}"
-                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">About</a>
+                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}About{% endblocktrans %}</a>
                     <a href="{% url 'services' %}"
-                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">Services</a>
-                    <a href="{% url 'packages' %}" class="nav-item nav-link">Tour Packages</a>
-                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}Services{% endblocktrans %}</a>
+                    <a href="{% url 'packages' %}" class="nav-item nav-link">{% blocktrans %}Tour Packages{% endblocktrans %}</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">{% blocktrans %}Contact{% endblocktrans %}</a>
                 </div>
             </div>
         </nav>
@@ -100,55 +118,66 @@
             <a href="{% url 'index' %}" class="navbar-brand">
                 <img src="{% static 'img/newlogo_3.png' %}" style="width: 200px; height: 50px">
             </a>
-            <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero
-                lorem dolor dolor</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+            <p>{% blocktrans %}Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys across the
+                globe.
+                Named after the legendary Silk Road, our agency embodies the spirit of exploration,
+                adventure, and cultural exchange. Whether you're seeking historical wonders, natural beauty,
+                or vibrant cultures, we are here to make your travel dreams a reality.{% endblocktrans %}</p>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">{% blocktrans %}Follow
+                Us{% endblocktrans %}</h6>
             <div class="d-flex justify-content-start">
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/silkroute.uz"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-primary btn-square"
+                   href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Our
+                Services{% endblocktrans %}</h5>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}About{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
+                    Destination{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Services{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Packages{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
+                    Guides{% endblocktrans %}</a>
+                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
+                    Blog{% endblocktrans %}</a>
             </div>
         </div>
+        {#        <div class="col-lg-3 col-md-6 mb-5">#}
+        {#            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>#}
+        {#            <div class="d-flex flex-column justify-content-start">#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>#}
+        {#                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>#}
+        {#            </div>#}
+        {#        </div>#}
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Contact
+                Us{% endblocktrans %}</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+            <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
+            <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
             <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-            <div class="w-100">
-                <div class="input-group">
-                    <input type="text" class="form-control border-light" style="padding: 25px;"
-                           placeholder="Your Email">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary px-3">Sign Up</button>
-                    </div>
-                </div>
-            </div>
+            {#            <div class="w-100">#}
+            {#                <div class="input-group">#}
+            {#                    <input type="text" class="form-control border-light" style="padding: 25px;"#}
+            {#                           placeholder="Your Email">#}
+            {#                    <div class="input-group-append">#}
+            {#                        <button class="btn btn-primary px-3">Sign Up</button>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
         </div>
     </div>
 </div>
@@ -156,13 +185,14 @@
      style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
+            <p class="m-0 text-white-50">Copyright &copy; <a href="{% url 'index' %}">silkroute.uz</a>. All Rights
+                Reserved.</a>
             </p>
         </div>
-        <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-            </p>
-        </div>
+        {#        <div class="col-lg-6 text-center text-md-right">#}
+        {#            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>#}
+        {#            </p>#}
+        {#        </div>#}
     </div>
 </div>
 <!-- Footer End -->

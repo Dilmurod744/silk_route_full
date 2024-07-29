@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-29 19:13+0500\n"
+"POT-Creation-Date: 2024-08-15 20:09+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,486 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: templates/index.html:99
+
+#: templates/base/base.html:98 templates/blog.html:14
+msgid "Home"
+msgstr ""
+
+#: templates/base/base.html:100 templates/base/base.html:143
+#: templates/index.html:100 templates/index.html:645
+msgid "About"
+msgstr "About"
+
+#: templates/base/base.html:102 templates/base/base.html:147
+#: templates/index.html:102 templates/index.html:387 templates/index.html:647
+msgid "Services"
+msgstr "Services"
+
+#: templates/base/base.html:103 templates/index.html:103
+msgid "Tour Packages"
+msgstr "Tour Packages"
+
+#: templates/base/base.html:104 templates/index.html:104
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/base/base.html:121
+msgid ""
+"Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys "
+"across the\n"
+"                globe.\n"
+"                Named after the legendary Silk Road, our agency embodies the "
+"spirit of exploration,\n"
+"                adventure, and cultural exchange. Whether you're seeking "
+"historical wonders, natural beauty,\n"
+"                or vibrant cultures, we are here to make your travel dreams "
+"a reality."
+msgstr ""
+
+#: templates/base/base.html:126
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"Follow\n"
+"                Us"
+msgstr "Home"
+
+#: templates/base/base.html:139
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"Our\n"
+"                Services"
+msgstr "Home"
+
+#: templates/base/base.html:144
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"\n"
+"                    Destination"
+msgstr "Home"
+
+#: templates/base/base.html:149 templates/blog.html:12 templates/blog.html:16
+#: templates/index.html:428 templates/index.html:648
+msgid "Packages"
+msgstr "Packages"
+
+#: templates/base/base.html:150
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"\n"
+"                    Guides"
+msgstr "Home"
+
+#: templates/base/base.html:152
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"\n"
+"                    Blog"
+msgstr "Home"
+
+#: templates/base/base.html:166
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Home "
+msgid ""
+"Contact\n"
+"                Us"
+msgstr "Home"
+
+#: templates/index.html:97
 msgid ""
 "\n"
 "                        Home "
+msgstr "Home"
+
+#: templates/index.html:121 templates/index.html:131
+msgid "Tours & Travel"
+msgstr "Tours & Travel"
+
+#: templates/index.html:122
+msgid "Your guide to Central Asia"
 msgstr ""
+
+#: templates/index.html:123 templates/index.html:133
+msgid "Book Now"
+msgstr "Book Now"
+
+#: templates/index.html:132
+msgid "Discover the history of Central Asia with Silk Route"
+msgstr ""
+
+#: templates/index.html:222
+msgid "About Us"
+msgstr "About Us"
+
+#: templates/index.html:223
+#, fuzzy
+#| msgid "We Provide Best Tour Packages In Your Budget"
+msgid "We Provide Best Tour Packages In Your Budget"
+msgstr "We Provide Best Tour Packages In Your Budget"
+
+#: templates/index.html:224
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        SILKROUTE invites you to a truly unique "
+#| "experience of the East, offering a deep dive into the traditions\n"
+#| "                        and history of thousands of years. We are ready "
+#| "to offer you an unforgettable holiday with a visit to the pearls\n"
+#| "                        of Central Asia, such as Samarkand, Bukhara and "
+#| "Khiva. Our professional team guarantees high-quality service and\n"
+#| "                        helps to understand our culture, history and "
+#| "geography. We offer a wide range of services:\n"
+#| "                        <br>\n"
+#| "                        - Excursions to the cities\n"
+#| "                        of the Great Silk Road: Tashkent, Samarkand, "
+#| "Bukhara, Khiva and other historical places accompanied by experienced "
+#| "guides.\n"
+#| "                        <br>\n"
+#| "                        - Visa support. - Booking hotels of different "
+#| "levels of comfort. - Rent of vehicles of various classes.\n"
+#| "                        <br>\n"
+#| "                        - Booking air and train tickets. - Reception of "
+#| "children's and student groups for holidays.\n"
+#| "                        <br>\n"
+#| "                        - Participation in various festivals held in "
+#| "Uzbekistan.\n"
+#| "                        <br>\n"
+#| "                        - Planning various tours: bike trips, photo "
+#| "tours, eco-tours and much more.\n"
+#| "                        <br>\n"
+#| "                        Our guides are highly qualified, reliable and "
+#| "have all the necessary human qualities.\n"
+#| "                        They speak many foreign languages ​​- Turkish, "
+#| "Russian, English, French, German, Spanish, Italian,\n"
+#| "                        Japanese, etc. The excursions offered by our "
+#| "specialists are designed individually taking into account\n"
+#| "                        interesting historical facts, without adhering to "
+#| "standard templates. Our guides and translators are well\n"
+#| "                        acquainted with the history of the region, the "
+#| "culture and traditions of the local population.\n"
+#| "                        They will tell you legends and stories, immersing "
+#| "you in the magical atmosphere of the East.\n"
+#| "                        Join us and experience the unique beauty of "
+#| "Uzbekistan with SILKROUTE!\n"
+#| "                    "
+msgid ""
+"\n"
+"                        SILKROUTE invites you to a truly unique experience "
+"of the East, offering a deep dive into the traditions\n"
+"                        and history of thousands of years. We are ready to "
+"offer you an unforgettable holiday with a visit to the pearls\n"
+"                        of Central Asia, such as Samarkand, Bukhara and "
+"Khiva. Our professional team guarantees high-quality service and\n"
+"                        helps to understand our culture, history and "
+"geography. We offer a wide range of services:\n"
+"                        <br>\n"
+"                        - Excursions to the cities\n"
+"                        of the Great Silk Road: Tashkent, Samarkand, "
+"Bukhara, Khiva and other historical places accompanied by experienced "
+"guides.\n"
+"                        <br>\n"
+"                        - Visa support. - Booking hotels of different levels "
+"of comfort. - Rent of vehicles of various classes.\n"
+"                        <br>\n"
+"                        - Booking air and train tickets. - Reception of "
+"children's and student groups for holidays.\n"
+"                        <br>\n"
+"                        - Participation in various festivals held in "
+"Uzbekistan.\n"
+"                        <br>\n"
+"                        - Planning various tours: bike trips, photo tours, "
+"eco-tours and much more.\n"
+"                        <br>\n"
+"                        Our guides are highly qualified, reliable and have "
+"all the necessary human qualities.\n"
+"                        They speak many foreign languages ​​- Turkish, "
+"Russian, English, French, German, Spanish, Italian,\n"
+"                        Japanese, etc. The excursions offered by our "
+"specialists are designed individually taking into account\n"
+"                        interesting historical facts, without adhering to "
+"standard templates. Our guides and translators are well\n"
+"                        acquainted with the history of the region, the "
+"culture and traditions of the local population.\n"
+"                        They will tell you legends and stories, immersing "
+"you in the magical atmosphere of the East.\n"
+"                        Join us and experience the unique beauty of "
+"Uzbekistan with SILKROUTE!\n"
+"                    "
+msgstr ""
+"\n"
+"                        SILKROUTE invites you to a truly unique experience "
+"of the East, offering a deep dive into the traditions\n"
+"                        and history of thousands of years. We are ready to "
+"offer you an unforgettable holiday with a visit to the pearls\n"
+"                        of Central Asia, such as Samarkand, Bukhara and "
+"Khiva. Our professional team guarantees high-quality service and\n"
+"                        helps to understand our culture, history and "
+"geography. We offer a wide range of services:\n"
+"                        <br>\n"
+"                        - Excursions to the cities\n"
+"                        of the Great Silk Road: Tashkent, Samarkand, "
+"Bukhara, Khiva and other historical places accompanied by experienced "
+"guides.\n"
+"                        <br>\n"
+"                        - Visa support. - Booking hotels of different levels "
+"of comfort. - Rent of vehicles of various classes.\n"
+"                        <br>\n"
+"                        - Booking air and train tickets. - Reception of "
+"children's and student groups for holidays.\n"
+"                        <br>\n"
+"                        - Participation in various festivals held in "
+"Uzbekistan.\n"
+"                        <br>\n"
+"                        - Planning various tours: bike trips, photo tours, "
+"eco-tours and much more.\n"
+"                        <br>\n"
+"                        Our guides are highly qualified, reliable and have "
+"all the necessary human qualities.\n"
+"                        They speak many foreign languages ​​- Turkish, "
+"Russian, English, French, German, Spanish, Italian,\n"
+"                        Japanese, etc. The excursions offered by our "
+"specialists are designed individually taking into account\n"
+"                        interesting historical facts, without adhering to "
+"standard templates. Our guides and translators are well\n"
+"                        acquainted with the history of the region, the "
+"culture and traditions of the local population.\n"
+"                        They will tell you legends and stories, immersing "
+"you in the magical atmosphere of the East.\n"
+"                        Join us and experience the unique beauty of "
+"Uzbekistan with SILKROUTE!\n"
+"                    "
+
+#: templates/index.html:277
+msgid "Competitive Pricing"
+msgstr "Competitive Pricing"
+
+#: templates/index.html:278
+msgid ""
+"Get the best value for your money with our competitive pricing on hotel "
+"bookings.\n"
+"                            We work tirelessly to bring you the most "
+"attractive rates, ensuring you can enjoy your stay without breaking the bank."
+msgstr ""
+
+#: templates/index.html:290
+#, fuzzy
+#| msgid "Services"
+msgid "Best Services"
+msgstr "Best Services"
+
+#: templates/index.html:291
+msgid ""
+"Experience top-notch customer service from the moment you book until the end "
+"of your stay.\n"
+"                            Our dedicated support team is available 24/7 to "
+"assist with any questions or concerns, ensuring a seamless and enjoyable "
+"experience."
+msgstr ""
+
+#: templates/index.html:303
+msgid "Cultural and Historical Stays"
+msgstr "Cultural and Historical Stays"
+
+#: templates/index.html:304
+msgid ""
+"Immerse yourself in history and culture with our unique accommodations "
+"located in historical buildings and cultural hotspots.\n"
+"                            Enjoy a stay in a Mausoleum, a Mosque, or a "
+"boutique hotel in the heart of a vibrant cultural district."
+msgstr ""
+
+#: templates/index.html:388
+msgid "Tours & Travel Services"
+msgstr "Tours & Travel Services"
+
+#: templates/index.html:394
+msgid "Travel Guide"
+msgstr "Travel Guide"
+
+#: templates/index.html:395
+msgid ""
+"Embark on an unforgettable journey with our expertly crafted travel guide,\n"
+"                        designed to inspire and inform every traveler. From "
+"the bustling cities to serene landscapes,\n"
+"                        our guide covers the world's most breathtaking "
+"destinations with insider tips, must-see attractions, and hidden gems."
+msgstr ""
+
+#: templates/index.html:403
+msgid "Ticket Booking"
+msgstr "Ticket Booking"
+
+#: templates/index.html:404
+msgid ""
+"Secure your journey with ease using our seamless ticket booking service. "
+"Whether you're planning\n"
+"                        a quick getaway or a long-haul adventure, our "
+"platform offers a hassle-free experience to book flights,\n"
+"                        trains, and bus tickets at the best prices."
+msgstr ""
+
+#: templates/index.html:412
+msgid "Hotel Booking"
+msgstr "Hotel Booking"
+
+#: templates/index.html:413
+msgid ""
+"Find the perfect place to rest and recharge with our comprehensive hotel "
+"booking service.\n"
+"                        From luxurious resorts to cozy bed and breakfasts, "
+"our platform offers a wide range of accommodations\n"
+"                        to suit every traveler's needs and preferences."
+msgstr ""
+
+#: templates/index.html:429
+msgid "Perfect Tour Packages"
+msgstr "Perfect Tour Packages"
+
+#: templates/index.html:630
+msgid ""
+"Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys "
+"across the globe.\n"
+"                Named after the legendary Silk Road, our agency embodies the "
+"spirit of exploration,\n"
+"                adventure, and cultural exchange. Whether you're seeking "
+"historical wonders, natural beauty,\n"
+"                or vibrant cultures, we are here to make your travel dreams "
+"a reality."
+msgstr ""
+
+#: templates/index.html:634
+msgid "Follow Us"
+msgstr ""
+
+#: templates/index.html:643
+#, fuzzy
+#| msgid "Services"
+msgid "Our Services"
+msgstr "Services"
+
+#: templates/index.html:646
+msgid "Destination"
+msgstr ""
+
+#: templates/index.html:649
+msgid "Guides"
+msgstr ""
+
+#: templates/index.html:650
+msgid "Blog"
+msgstr ""
+
+#: templates/index.html:663
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Contact"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "\n"
+#~ "                        About"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "\n"
+#~ "                        Services"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "Tour\n"
+#~ "                        Packages"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "\n"
+#~ "                        Contact"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid "Discover Amazing Places With Us"
+#~ msgid "Discover Amazing Places With Us"
+#~ msgstr "Discover Amazing Places With Us"
+
+#, fuzzy
+#~| msgid "Let's Discover The World Together"
+#~ msgid ""
+#~ "Let's Discover The World\n"
+#~ "                            Together"
+#~ msgstr "Let's Discover The World Together"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "Book\n"
+#~ "                            Now"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "Tours &\n"
+#~ "                            Travel"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "About\n"
+#~ "                        Us"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "\n"
+#~ "                Services"
+#~ msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                        Home "
+#~ msgid ""
+#~ "\n"
+#~ "                Packages"
+#~ msgstr "Home"

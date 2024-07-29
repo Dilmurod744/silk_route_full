@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block tittle %}Packages{% endblock %}
 {% block main %}
 
@@ -8,11 +9,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Blog</h3>
+                <h3 class="display-4 text-white text-uppercase">{% blocktrans %}Packages{% endblocktrans %}</h3>
                 <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">{% blocktrans %}Home{% endblocktrans %}</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Packages</p>
+                    <p class="m-0 text-uppercase">{% blocktrans %}Packages{% endblocktrans %}</p>
                 </div>
             </div>
         </div>
@@ -22,42 +23,57 @@
 
     <!-- Booking Start -->
     <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
+    <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px;">
+            <form method="get">
                 <div class="row align-items-center" style="min-height: 60px;">
                     <div class="col-md-10">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
+                                    <!-- Destination Field -->
+                                    <select class="custom-select px-4" style="height: 47px;" name="{{ form.destination.name }}">
+                                        <option value="">{{ form.destination.label }}</option>
+                                        {% for choice in form.destination.field.choices %}
+                                            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                                        {% endfor %}
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                                        <!-- Departure Date Field -->
+                                        <input type="text"
+                                               name="{{ form.depart_time.name }}"
+                                               class="form-control p-4 datetimepicker-input"
+                                               placeholder="Depart Date"
+                                               data-target="#date1"
+                                               data-toggle="datetimepicker"
+                                               value="{{ form.depart_time.value|default_if_none:'' }}"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                                        <!-- Return Date Field -->
+                                        <input type="text"
+                                               name="{{ form.return_time.name }}"
+                                               class="form-control p-4 datetimepicker-input"
+                                               placeholder="Return Date"
+                                               data-target="#date2"
+                                               data-toggle="datetimepicker"
+                                               value="{{ form.return_time.value|default_if_none:'' }}"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
+                                    <!-- Duration Field -->
+                                    <select class="custom-select px-4" style="height: 47px;" name="{{ form.duration.name }}">
+                                        <option value="">{{ form.duration.label }}</option>
+                                        <!-- Add more duration options here if needed -->
                                     </select>
                                 </div>
                             </div>
@@ -67,9 +83,10 @@
                         <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+</div>
     <!-- Booking End -->
 
 
@@ -84,7 +101,7 @@
                                 {% for package in packages %}
                                 <div class="position-relative">
                                 <a class="d-block"
-                                    href="{% url 'package-detail' package.pk %}">
+                                    href="{% url 'package-detail' package.slug %}">
                                     <img class="img-fluid w-100" src="{{ package.image.url }}" alt=""></a>
                                     <div class="blog-date">
                                         <h6 class="font-weight-bold mb-n1">{{ package.depart_time.day }}</h6>
