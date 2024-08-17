@@ -91,6 +91,9 @@
                     <option value="{{ package.id }}">{{ package.name }}</option>
                 {% endfor %}
             </select>
+            {% for package in packages %}
+                <a href="/packages/{{ package.slug }}" class="btn btn-primary">{{ package.name }} Details</a>
+            {% endfor %}
         </div>
         <div class="form-group">
             <label for="additional-info">Additional Information</label>
