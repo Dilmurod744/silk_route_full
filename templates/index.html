@@ -19,95 +19,104 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Libraries Stylesheet -->
     <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
     <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet"/>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/navbar_logo.css' %}">
+
 </head>
 
 <body>
-<!-- Topbar Start -->
-<div class="container-fluid bg-light pt-3 d-none d-lg-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
-                    <p class="text-body px-3">|</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
+<!-- Navbar + Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <!-- Navbar Start -->
+    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-none py-2 py-lg-1 pl-3 pl-lg-4">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <img src="{% static 'img/newlogo_3.png' %}" style="width: 150px; height: 40px">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-2" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    <a href="{% url 'index' %}"
+                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">
+                        {% blocktrans %}Home{% endblocktrans %}</a>
+                    <a href="{% url 'about' %}"
+                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">
+                        {% blocktrans %}About{% endblocktrans %}</a>
+                    <a href="{% url 'services' %}"
+                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">
+                        {% blocktrans %}Services{% endblocktrans %}</a>
+                    <a href="{% url 'packages' %}" class="nav-item nav-link">
+                        {% blocktrans %}Tour Packages{% endblocktrans %}</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">
+                        {% blocktrans %}Contact{% endblocktrans %}</a>
                 </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-<a class="text-primary px-3" href="https://vk.com/id845402373">
-    <i class="fab fa-vk"></i>
-</a>
-                    <a class="text-primary px-3" href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-<a class="text-primary px-3" href="https://t.me/">
-    <i class="fab fa-telegram-plane"></i>
-</a>
-                    <div class="multilang-wrap">
-                        <ul class="wpm-language-switcher switcher-list">
-                            <li class="item-language-en ">
-                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
-												<img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/en.png"
-                                                     alt="En">
-													<span>En</span>
-                            </li>
-                            <li class="item-language-ru">
-                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
-                                    <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/ru.png"
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="mb-0" style="font-size: 1.25rem;"><i class="fa fa-envelope mr-2"></i><a
+                                href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
+                        <p class="text-body px-3 mb-0" style="font-size: 1.25rem;">|</p>
+                        <p class="mb-0" style="font-size: 1.25rem;"><i class="fa fa-phone-alt mr-2"></i><a
+                                href="tel: +998908182022">+99890 8182022</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
+                            <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="https://vk.com/id845402373">
+                            <i class="fab fa-vk" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3"
+                           href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
+                            <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="https://t.me/">
+                            <i class="fab fa-telegram-plane" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <div class="multilang-wrap ml-3">
+                            <ul class="wpm-language-switcher switcher-list" style="font-size: 1.25rem;">
+                                <li class="item-language-en">
+                                    <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
+                                    <img src="{% static 'img/icons8-united-kingdom-20.png' %}"
+                                         alt="En">
+                                    <span></span>
+                                </li>
+                                <li class="item-language-ru">
+                                    <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
+                                    <img src="{% static 'img/icons8-russia-20.png' %}"
                                          alt="Ru">
-                                    <span>Ru</span>
-                            </li>
-                        </ul>
+                                    <span></span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Topbar End -->
 </div>
-<!-- Topbar End -->
-
-
-<!-- Navbar Start -->
-<div class="container-fluid position-relative nav-bar p-0">
-    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="{% url 'index' %}" class="navbar-brand">
-                <img src="{% static 'img/newlogo_3.png' %}" style="width: 200px; height: 50px">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav ml-auto py-0">
-                    <a href="{% url 'index' %}"
-                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">{% blocktrans %}
-                        Home {% endblocktrans %}</a>
-                    <a href="{% url 'about' %}"
-                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}About{% endblocktrans %}</a>
-                    <a href="{% url 'services' %}"
-                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}Services{% endblocktrans %}</a>
-                    <a href="{% url 'packages' %}" class="nav-item nav-link">{% blocktrans %}Tour Packages{% endblocktrans %}</a>
-                    <a href="{% url 'contact' %}" class="nav-item nav-link">{% blocktrans %}Contact{% endblocktrans %}</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Navbar End -->
 
 
 <!-- Carousel Start -->
@@ -118,9 +127,12 @@
                 <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
-                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Your guide to Central Asia{% endblocktrans %}</h1>
-                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book Now{% endblocktrans %}</a>
+                        <h4 class="text-white text-uppercase mb-md-3">
+                            {% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
+                        <h1 class="display-3 text-white mb-md-4">
+                            {% blocktrans %}Your guide to THE Central Asia{% endblocktrans %}</h1>
+                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">
+                            {% blocktrans %}Book Now{% endblocktrans %}</a>
                     </div>
                 </div>
             </div>
@@ -128,9 +140,12 @@
                 <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
-                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Discover the history of Central Asia with Silk Route{% endblocktrans %}</h1>
-                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book Now{% endblocktrans %}</a>
+                        <h4 class="text-white text-uppercase mb-md-3">
+                            {% blocktrans %}Tours & Travel{% endblocktrans %}</h4>
+                        <h1 class="display-3 text-white mb-md-4">
+                            {% blocktrans %}Discover the history of Central Asia with Silk Route{% endblocktrans %}</h1>
+                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">
+                            {% blocktrans %}Book Now{% endblocktrans %}</a>
                     </div>
                 </div>
             </div>
@@ -219,32 +234,45 @@
             </div>
             <div class="col-lg-6 pt-5 pb-lg-5">
                 <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}About Us{% endblocktrans %}</h6>
-                    <h1 class="mb-3">{% blocktrans %}We Provide Best Tour Packages In Your Budget{% endblocktrans %}</h1>
+                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">
+                        {% blocktrans %}About Us{% endblocktrans %}</h6>
+                    <h1 class="mb-3">
+                        {% blocktrans %}We offer the best tour packages to fit your budget.{% endblocktrans %}</h1>
                     <p>{% blocktrans %}
-                        SILKROUTE invites you to a truly unique experience of the East, offering a deep dive into the traditions
-                        and history of thousands of years. We are ready to offer you an unforgettable holiday with a visit to the pearls
-                        of Central Asia, such as Samarkand, Bukhara and Khiva. Our professional team guarantees high-quality service and
-                        helps to understand our culture, history and geography. We offer a wide range of services:
+                        SILK ROUTE DMC (Destination Management Company) welcomes you to an extraordinary journey through
+                        the East, delving deep into traditions and histories spanning thousands of years. We are
+                        committed to providing you with an unforgettable holiday, showcasing the jewels of Central Asia,
+                        such as Samarkand, Bukhara, and Khiva.
+
+                        Our professional team guarantees high-quality service and aims to enhance your understanding of
+                        our culture, history, and geography. We offer a wide range of services, including:
                         <br>
-                        - Excursions to the cities
-                        of the Great Silk Road: Tashkent, Samarkand, Bukhara, Khiva and other historical places accompanied by experienced guides.
+                        - Guided tours to the cities of the Great Silk Road: Tashkent, Samarkand, Bukhara, Khiva, and
+                        other historical sites.
                         <br>
-                        - Visa support. - Booking hotels of different levels of comfort. - Rent of vehicles of various classes.
+                        - Visa support.
                         <br>
-                        - Booking air and train tickets. - Reception of children's and student groups for holidays.
+                        - Hotel booking with various levels of comfort.
                         <br>
-                        - Participation in various festivals held in Uzbekistan.
+                        - Rental services for vehicles of different classes.
                         <br>
-                        - Planning various tours: bike trips, photo tours, eco-tours and much more.
+                        - Booking of air and train tickets.
+                        <br><br>
+                        - Arrangements for children's and student groups.
+                        <br><br>
+                        - Participation in Uzbekistan's various festivals.
+                        <br><br>
+                        - Tailored tours encompassing bike trips, photo tours, eco-tours, and beyond.
                         <br>
-                        Our guides are highly qualified, reliable and have all the necessary human qualities.
-                        They speak many foreign languages ​​- Turkish, Russian, English, French, German, Spanish, Italian,
-                        Japanese, etc. The excursions offered by our specialists are designed individually taking into account
-                        interesting historical facts, without adhering to standard templates. Our guides and translators are well
-                        acquainted with the history of the region, the culture and traditions of the local population.
-                        They will tell you legends and stories, immersing you in the magical atmosphere of the East.
-                        Join us and experience the unique beauty of Uzbekistan with SILKROUTE!
+                        Our guides are highly qualified, dependable, and possess essential personal qualities. They are
+                        proficient in various foreign languages, including Turkish, Russian, English, French, German,
+                        Spanish, Italian, Japanese, and more. The excursions designed by our specialists are
+                        individualized, incorporating fascinating historical facts without adhering to standard
+                        templates. Our guides and translators boast deep knowledge of the region's history, as well as
+                        the culture and traditions of the local populace. They will regale you with legends and stories,
+                        immersing you in the enchanting ambiance of the East. Join us and immerse yourself in the unique
+                        beauty of Uzbekistan with SILKROUTE!
+                        </span>
                     {% endblocktrans %}</p>
                     <div class="row mb-4">
                         <div class="col-6">
@@ -254,12 +282,12 @@
                             <img class="img-fluid" src="{% static 'img/about_2.png' %}" alt="">
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-1">More</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- About End -->
 
 
@@ -275,8 +303,10 @@
                     </div>
                     <div class="d-flex flex-column">
                         <h5 class="">{% blocktrans %}Competitive Pricing{% endblocktrans %}</h5>
-                        <p class="m-0">{% blocktrans %}Get the best value for your money with our competitive pricing on hotel bookings.
-                            We work tirelessly to bring you the most attractive rates, ensuring you can enjoy your stay without breaking the bank.{% endblocktrans %}</p>
+                        <p class="m-0">{% blocktrans %}Get the best value for your money with our competitive pricing on
+                            hotel bookings.
+                            We work tirelessly to bring you the most attractive rates, ensuring you can enjoy your stay
+                            without breaking the bank.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -288,8 +318,10 @@
                     </div>
                     <div class="d-flex flex-column">
                         <h5 class="">{% blocktrans %}Best Services{% endblocktrans %}</h5>
-                        <p class="m-0">{% blocktrans %}Experience top-notch customer service from the moment you book until the end of your stay.
-                            Our dedicated support team is available 24/7 to assist with any questions or concerns, ensuring a seamless and enjoyable experience.{% endblocktrans %}</p>
+                        <p class="m-0">{% blocktrans %}Experience top-notch customer service from the moment you book
+                            until the end of your stay.
+                            Our dedicated support team is available 24/7 to assist with any questions or concerns,
+                            ensuring a seamless and enjoyable experience.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -301,8 +333,10 @@
                     </div>
                     <div class="d-flex flex-column">
                         <h5 class="">{% blocktrans %}Cultural and Historical Stays{% endblocktrans %}</h5>
-                        <p class="m-0">{% blocktrans %}Immerse yourself in history and culture with our unique accommodations located in historical buildings and cultural hotspots.
-                            Enjoy a stay in a Mausoleum, a Mosque, or a boutique hotel in the heart of a vibrant cultural district.{% endblocktrans %}</p>
+                        <p class="m-0">{% blocktrans %}Immerse yourself in history and culture with our unique
+                            accommodations located in historical buildings and cultural hotspots.
+                            Enjoy a stay in a Mausoleum, a Mosque, or a boutique hotel in the heart of a vibrant
+                            cultural district.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -384,7 +418,8 @@
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}Services{% endblocktrans %}</h6>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}
+                Services{% endblocktrans %}</h6>
             <h1>{% blocktrans %}Tours & Travel Services{% endblocktrans %}</h1>
         </div>
         <div class="row">
@@ -392,17 +427,21 @@
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                     <h5 class="mb-2">{% blocktrans %}Travel Guide{% endblocktrans %}</h5>
-                    <p class="m-0">{% blocktrans %}Embark on an unforgettable journey with our expertly crafted travel guide,
+                    <p class="m-0">{% blocktrans %}Embark on an unforgettable journey with our expertly crafted travel
+                        guide,
                         designed to inspire and inform every traveler. From the bustling cities to serene landscapes,
-                        our guide covers the world's most breathtaking destinations with insider tips, must-see attractions, and hidden gems.{% endblocktrans %}</p>
+                        our guide covers the world's most breathtaking destinations with insider tips, must-see
+                        attractions, and hidden gems.{% endblocktrans %}</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
                     <h5 class="mb-2">{% blocktrans %}Ticket Booking{% endblocktrans %}</h5>
-                    <p class="m-0">{% blocktrans %}Secure your journey with ease using our seamless ticket booking service. Whether you're planning
-                        a quick getaway or a long-haul adventure, our platform offers a hassle-free experience to book flights,
+                    <p class="m-0">{% blocktrans %}Secure your journey with ease using our seamless ticket booking
+                        service. Whether you're planning
+                        a quick getaway or a long-haul adventure, our platform offers a hassle-free experience to book
+                        flights,
                         trains, and bus tickets at the best prices.{% endblocktrans %}</p>
                 </div>
             </div>
@@ -410,8 +449,10 @@
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
                     <h5 class="mb-2">{% blocktrans %}Hotel Booking{% endblocktrans %}</h5>
-                    <p class="m-0">{% blocktrans %}Find the perfect place to rest and recharge with our comprehensive hotel booking service.
-                        From luxurious resorts to cozy bed and breakfasts, our platform offers a wide range of accommodations
+                    <p class="m-0">{% blocktrans %}Find the perfect place to rest and recharge with our comprehensive
+                        hotel booking service.
+                        From luxurious resorts to cozy bed and breakfasts, our platform offers a wide range of
+                        accommodations
                         to suit every traveler's needs and preferences.{% endblocktrans %}</p>
                 </div>
             </div>
@@ -425,7 +466,8 @@
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{% blocktrans %}Packages{% endblocktrans %}</h6>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">
+                {% blocktrans %}Packages{% endblocktrans %}</h6>
             <h1>{% blocktrans %}Perfect Tour Packages{% endblocktrans %}</h1>
         </div>
         <div class="row">
@@ -442,7 +484,8 @@
                                         class="fa fa-calendar-alt text-primary mr-2"></i>{{ package.duration }}</small>
                                 {#                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>#}
                             </div>
-                            <a class="h5 text-decoration-none" href="{% url 'package-detail' package.pk %}">{{ package.name }}</a>
+                            <a class="h5 text-decoration-none"
+                               href="{% url 'package-detail' package.pk %}">{{ package.name }}</a>
                             {#                            <div class="border-top mt-4 pt-4">#}
                             {#                                <div class="d-flex justify-content-between">#}
                             {#                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>#}
@@ -459,7 +502,6 @@
     </div>
 </div>
 <!-- Packages End -->
-
 
 
 <!-- Team Start -->
@@ -626,54 +668,73 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <a href="{% url 'index' %}" class="navbar-brand">
                 <img src="{% static 'img/newlogo_3.png' %}" style="width: 200px; height: 50px">
+
             </a>
-            <p>{% blocktrans %}Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys across the globe.
+            <br>
+            <br>
+            <br>
+            <p>{% blocktrans %}Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys across the
+                globe.
                 Named after the legendary Silk Road, our agency embodies the spirit of exploration,
                 adventure, and cultural exchange. Whether you're seeking historical wonders, natural beauty,
                 or vibrant cultures, we are here to make your travel dreams a reality.{% endblocktrans %}</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">{% blocktrans %}Follow Us{% endblocktrans %}</h6>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">
+                {% blocktrans %}Follow Us{% endblocktrans %}</h6>
             <div class="d-flex justify-content-start">
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/silkroute.uz"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/silkroute.uz"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-primary btn-square"
+                   href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Our Services{% endblocktrans %}</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">
+                {% blocktrans %}Our Services{% endblocktrans %}</h5>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}About{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Destination{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Services{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Packages{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Guides{% endblocktrans %}</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}Blog{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}About{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Destination{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Services{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Packages{% endblocktrans %}</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Guides{% endblocktrans %}</a>
+                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>
+                    {% blocktrans %}Blog{% endblocktrans %}</a>
             </div>
         </div>
-{#        <div class="col-lg-3 col-md-6 mb-5">#}
-{#            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>#}
-{#            <div class="d-flex flex-column justify-content-start">#}
-{#                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>#}
-{#                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>#}
-{#                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>#}
-{#                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>#}
-{#            </div>#}
-{#        </div>#}
+        {#        <div class="col-lg-3 col-md-6 mb-5">#}
+        {#            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>#}
+        {#            <div class="d-flex flex-column justify-content-start">#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>#}
+        {#                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>#}
+        {#                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>Packages</a>#}
+        {#            </div>#}
+        {#        </div>#}
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Contact Us{% endblocktrans %}</h5>
-            <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">
+                {% blocktrans %}Contact Us{% endblocktrans %}</h5>
+            
+            <p><i class="fa fa-map-marker-alt mr-2"></i>
+                {% blocktrans %}3 Block Chorsu, Shaykhantakhur district,Tashkent, Uzbekistan{% endblocktrans %}</p>
             <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
             <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-{#            <div class="w-100">#}
-{#                <div class="input-group">#}
-{#                    <input type="text" class="form-control border-light" style="padding: 25px;"#}
-{#                           placeholder="Your Email">#}
-{#                    <div class="input-group-append">#}
-{#                        <button class="btn btn-primary px-3">Sign Up</button>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
+            {#            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>#}
+            {#                        <div class="w-100">#}
+            {#                            <div class="input-group">#}
+            {#                                <input type="text" class="form-control border-light" style="padding: 25px;"#}
+            {#                                       placeholder="Your Email">#}
+            {#                                <div class="input-group-append">#}
+            {#                                    <button class="btn btn-primary px-3">Sign Up</button>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
         </div>
     </div>
 </div>
@@ -681,13 +742,14 @@
      style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="{% url 'index' %}">silkroute.uz</a>. All Rights Reserved.</a>
+            <p class="m-0 text-white-50">Copyright &copy; <a href="{% url 'index' %}">silkroute.uz</a>.
+                All Rights Reserved.</a>
             </p>
         </div>
-{#        <div class="col-lg-6 text-center text-md-right">#}
-{#            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>#}
-{#            </p>#}
-{#        </div>#}
+        {#        <div class="col-lg-6 text-center text-md-right">#}
+        {#            <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>#}
+        {#            </p>#}
+        {#        </div>#}
     </div>
 </div>
 <!-- Footer End -->
@@ -712,6 +774,7 @@
 
 <!-- Template Javascript -->
 <script src="{% static 'js/main.js' %}"></script>
+
 </body>
 
 </html>

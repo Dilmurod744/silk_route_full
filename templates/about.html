@@ -6,9 +6,9 @@
 
     <body>
 
-    <header>
-        <h1>About Us</h1>
-    </header>
+    {#    <header>#}
+    {#        <h1>About Us</h1>#}
+    {#    </header>#}
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -30,31 +30,35 @@
                 overflow: hidden;
             }
 
-            header {
-                background: #333;
-                color: #fff;
-                padding-top: 30px;
-                min-height: 70px;
-                border-bottom: #0779e4 3px solid;
-            }
+            {#header {#}
+            {#    background: #333;#}
+            {#    color: #fff;#}
+            {#    padding-top: 30px;#}
+            {#    min-height: 70px;#}
+            {#    border-bottom: #0779e4 3px solid;#}
+            {
+            #}#}
 
-            header a {
-                color: #fff;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 16px;
-            }
-
-            header ul {
-                padding: 0;
-                list-style: none;
-            }
-
-            header li {
-                float: left;
-                display: inline;
-                padding: 0 20px 0 20px;
-            }
+            {#header a {#}
+            {#    color: #fff;#}
+            {#    text-decoration: none;#}
+            {#    text-transform: uppercase;#}
+            {#    font-size: 16px;#}
+            {
+            #}#}
+            {##}
+            {#header ul {#}
+            {#    padding: 0;#}
+            {#    list-style: none;#}
+            {
+            #}#}
+            {##}
+            {#header li {#}
+            {#    float: left;#}
+            {#    display: inline;#}
+            {#    padding: 0 20px 0 20px;#}
+            {
+            #}#}
 
             header #branding {
                 float: left;
@@ -113,24 +117,29 @@
                 padding: 30px;
                 margin-top: 30px;
             }
+
+            }
+            }
+            }
+            }
         </style>
     </head>
     <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Discover Uzbekistan</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#uzbekistan">Uzbekistan</a></li>
-                    <li><a href="#tashkent">Tashkent</a></li>
-                    <li><a href="#samarkand">Samarkand</a></li>
-                    <li><a href="#bukhara">Bukhara</a></li>
-                    <li><a href="#khiva">Khiva</a></li>
-                </ul>
-            </nav>
-        </div>
+        {#        <div class="container">#}
+        {#            <div id="branding">#}
+        {#                <h1>Discover Uzbekistan</h1>#}
+        {#            </div>#}
+        {#            <nav>#}
+        {#                <ul>#}
+        {#                    <li><a href="#uzbekistan">Uzbekistan</a></li>#}
+        {#                    <li><a href="#tashkent">Tashkent</a></li>#}
+        {#                    <li><a href="#samarkand">Samarkand</a></li>#}
+        {#                    <li><a href="#bukhara">Bukhara</a></li>#}
+        {#                    <li><a href="#khiva">Khiva</a></li>#}
+        {#                </ul>#}
+        {#            </nav>#}
+        {#        </div>#}
     </header>
 
     <div id="showcase">
@@ -142,8 +151,9 @@
 
     <div class="container">
         <section id="uzbekistan" class="info">
-            <img src="{% static 'img/Tashkent_skyline_2019.jpg' %}" alt="Uzbekistan">
-            <h2>Uzbekistan: A Journey Through Silk Road Heritage, Cultural Riches, and Modern Ambitions</h2>
+            <img src="{% static 'img/tashkent.jpg' %}" alt="Uzbekistan">
+            <h2>{% blocktrans %}Uzbekistan: A Journey Through Silk Road Heritage, Cultural Riches, and Modern
+                Ambitions{% endblocktrans %}</h2>
             <p>Exploring Uzbekistan: Where Ancient Traditions Meet Vibrant Modernity</p>
             <ul>
                 <p>Uzbekistan, located in Central Asia, is a country rich in history, culture, and natural beauty. As
@@ -223,7 +233,7 @@
             </ul>
         </section>
         <section id="khiva" class="info">
-            <img src="{% static 'img/khiva.png' %}" alt="Khiva">
+            <img src="{% static 'img/98.jpg' %}" alt="Khiva">
             <h2>Khiva: The Ancient Oasis</h2>
             <p>Khiva, an ancient city located on the edge of the Kyzylkum Desert, is renowned for its well-preserved
                 architecture and historical significance.</p>

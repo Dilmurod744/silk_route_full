@@ -18,6 +18,7 @@ DEBUG = os.getenv('DEBUG')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,6 +31,11 @@ INSTALLED_APPS = [
     'parler',
     'apps',
     'django_ckeditor_5',
+    'rest_framework',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+    'clickuz',
+
 ]
 
 MIDDLEWARE = [
@@ -219,7 +225,7 @@ CKEDITOR_5_CONFIGS = {
         }
     },
 
-    }
+}
 
 # settings.py
 
@@ -229,4 +235,9 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': 'divarea',  # Make sure the divarea plugin is enabled
         'contentsCss': ['/static/css/custom_ckeditor.css'],
     },
+}
+
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }

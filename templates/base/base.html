@@ -29,85 +29,137 @@
 </head>
 
 <body>
-<!-- Topbar Start -->
-<div class="container-fluid bg-light pt-3 d-none d-lg-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
-                    <p class="text-body px-3">|</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
+<!-- Navbar + Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <!-- Navbar Start -->
+    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-none py-2 py-lg-1 pl-3 pl-lg-4">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <img src="{% static 'img/newlogo_3.png' %}" style="width: 150px; height: 40px">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-2" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    <a href="{% url 'index' %}"
+                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">{% blocktrans %}
+                        Home{% endblocktrans %}</a>
+                    <a href="{% url 'about' %}"
+                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}
+                        About{% endblocktrans %}</a>
+                    <a href="{% url 'services' %}"
+                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}
+                        Services{% endblocktrans %}</a>
+                    <a href="{% url 'packages' %}" class="nav-item nav-link">{% blocktrans %}Tour
+                        Packages{% endblocktrans %}</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">{% blocktrans %}
+                        Contact Us{% endblocktrans %}</a>
                 </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-primary px-3" href="https://vk.com/id845402373">
-                        <i class="fab fa-vk"></i>
-                    </a>
-                    <a class="text-primary px-3"
-                       href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary px-3" href="https://t.me/">
-                        <i class="fab fa-telegram-plane"></i>
-                    </a>
-                    <div class="multilang-wrap">
-                        <ul class="wpm-language-switcher switcher-list">
-                            <li class="item-language-en ">
-                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
-                                <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/en.png"
-                                     alt="En">
-                                <span>En</span>
-                            </li>
-                            <li class="item-language-ru">
-                                <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
-                                <img src="https://www.dolores.uz/wp-content/plugins/wp-multilang/flags/ru.png"
-                                     alt="Ru">
-                                <span>Ru</span>
-                            </li>
-                        </ul>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="mb-0" style="font-size: 1.25rem;"><i class="fa fa-envelope mr-2"></i><a
+                                href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
+                        <p class="text-body px-3 mb-0" style="font-size: 1.25rem;">|</p>
+                        <p class="mb-0" style="font-size: 1.25rem;"><i class="fa fa-phone-alt mr-2"></i><a
+                                href="tel: +998908182022">+99890 8182022</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="https://www.facebook.com/silkroute.uz">
+                            <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="https://vk.com/id845402373">
+                            <i class="fab fa-vk" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3"
+                           href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
+                            <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a class="text-primary px-3" href="https://t.me/">
+                            <i class="fab fa-telegram-plane" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <div class="multilang-wrap ml-3">
+                            <ul class="wpm-language-switcher switcher-list" style="font-size: 1.25rem;">
+                                <li class="item-language-en">
+                                    <a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a>
+                                    <img src="{% static 'img/icons8-united-kingdom-20.png' %}"
+                                         alt="En">
+                                    <span></span>
+                                </li>
+                                <li class="item-language-ru">
+                                    <a href="{% url 'set_language' %}?next={{ request.path }}&language=ru">Русский</a>
+                                    <img src="{% static 'img/icons8-russia-20.png' %}"
+                                         alt="Ru">
+                                    <span></span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Topbar End -->
 </div>
-<!-- Topbar End -->
 
 
-<!-- Navbar Start -->
-<div class="container-fluid position-relative nav-bar p-0">
-    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="{% url 'index' %}" class="navbar-brand">
-                <img src="{% static 'img/newlogo_3.png' %}" style="width: 200px; height: 50px">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav ml-auto py-0">
-                    <a href="{% url 'index' %}"
-                       class="nav-item nav-link{% if request.path == 'index' %}active{% endif %}">{% blocktrans %}Home{% endblocktrans %}</a>
-                    <a href="{% url 'about' %}"
-                       class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}About{% endblocktrans %}</a>
-                    <a href="{% url 'services' %}"
-                       class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}Services{% endblocktrans %}</a>
-                    <a href="{% url 'packages' %}" class="nav-item nav-link">{% blocktrans %}Tour Packages{% endblocktrans %}</a>
-                    <a href="{% url 'contact' %}" class="nav-item nav-link">{% blocktrans %}Contact{% endblocktrans %}</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Navbar End -->
+<!-- Carousel Start -->
+{#<div class="container-fluid p-0">#}
+{#    <div id="header-carousel" class="carousel slide" data-ride="carousel">#}
+{#        <div class="carousel-inner">#}
+{#            <div class="carousel-item active">#}
+{#                <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">#}
+{#                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">#}
+{#                    <div class="p-3" style="max-width: 900px;">#}
+{#                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours &#}
+{#                            Travel{% endblocktrans %}</h4>#}
+{#                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Your guide to THE Central#}
+{#                            Asia{% endblocktrans %}</h1>#}
+{#                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book#}
+{#                            Now{% endblocktrans %}</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="carousel-item">#}
+{#                <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">#}
+{#                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">#}
+{#                    <div class="p-3" style="max-width: 900px;">#}
+{#                        <h4 class="text-white text-uppercase mb-md-3">{% blocktrans %}Tours &#}
+{#                            Travel{% endblocktrans %}</h4>#}
+{#                        <h1 class="display-3 text-white mb-md-4">{% blocktrans %}Discover the history of Central Asia#}
+{#                            with Silk Route{% endblocktrans %}</h1>#}
+{#                        <a href="{% url 'booking' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">{% blocktrans %}Book#}
+{#                            Now{% endblocktrans %}</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">#}
+{#            <div class="btn btn-dark" style="width: 45px; height: 45px;">#}
+{#                <span class="carousel-control-prev-icon mb-n2"></span>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a class="carousel-control-next" href="#header-carousel" data-slide="next">#}
+{#            <div class="btn btn-dark" style="width: 45px; height: 45px;">#}
+{#                <span class="carousel-control-next-icon mb-n2"></span>#}
+{#            </div>#}
+{#        </a>#}
+{#    </div>#}
+{#</div>#}
 
 
 {% block main %}{% endblock %}
