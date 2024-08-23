@@ -15,7 +15,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'drf_spectacular_sidecar',
-    'clickuz',
+    # 'clickuz',
 
 ]
 
@@ -228,6 +228,13 @@ CKEDITOR_5_CONFIGS = {
 }
 
 # settings.py
+
+CLICK_SETTINGS = {
+    'service_id': os.getenv('CLICK_SERVICE_ID'),
+    'merchant_id': os.getenv('CLICK_MERCHANT_ID'),
+    'secret_key': os.getenv('CLICK_SECRET_KEY'),
+    'merchant_user_id': os.getenv("CLICK_MERCHANT_USER_ID"),
+}
 
 CKEDITOR_CONFIGS = {
     'default': {

@@ -3,19 +3,22 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils.translation import activate
 from django.views.generic import TemplateView, ListView, DetailView, FormView
+from rest_framework import generics
 
 from apps.forms import ContactForm, BookingForm
 from apps.models import Packages, Booking
 
 from django.http import JsonResponse
 from django.shortcuts import redirect
-from rest_framework.generics import CreateAPIView
+from rest_framework.generics import CreateAPIView, GenericAPIView
 from rest_framework.views import APIView
 from . import serializers
 from .methods_merchant_api import Services
 from .models import ClickTransaction
 from .status import ORDER_FOUND, INVALID_AMOUNT, ORDER_NOT_FOUND
 from .utils import PyClickMerchantAPIView
+
+
 # Create your views here.
 class IndexView(ListView):
     model = Packages
@@ -130,9 +133,6 @@ class PackageSearchView(ListView):
         context = super().get_context_data(**kwargs)
         context['form'] = TripSearchForm(self.request.GET or None)
         return context
-
-
-
 
 
 class CreateClickTransactionView(CreateAPIView):

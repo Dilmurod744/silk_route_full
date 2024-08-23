@@ -59,16 +59,16 @@ class PyClickMerchantAPIView(APIView):
 
     @classmethod
     def click_webhook_errors(
-        cls,
-        click_trans_id: str,
-        service_id: str,
-        merchant_trans_id: str,
-        amount: str,
-        action: str,
-        sign_time: str,
-        sign_string: str,
-        error: str,
-        merchant_prepare_id: str = None,
+            cls,
+            click_trans_id: str,
+            service_id: str,
+            merchant_trans_id: str,
+            amount: str,
+            action: str,
+            sign_time: str,
+            sign_string: str,
+            error: str,
+            merchant_prepare_id: str = None,
     ) -> dict:
 
         merchant_prepare_id = merchant_prepare_id if action and action == "1" else ""
@@ -122,19 +122,19 @@ class PyClickMerchantAPIView(APIView):
 
     @classmethod
     def prepare(
-        cls,
-        click_trans_id: str,
-        service_id: str,
-        click_paydoc_id: str,
-        merchant_trans_id: str,
-        amount: str,
-        action: str,
-        sign_time: str,
-        sign_string: str,
-        error: str,
-        error_note: str,
-        *args,
-        **kwargs,
+            cls,
+            click_trans_id: str,
+            service_id: str,
+            click_paydoc_id: str,
+            merchant_trans_id: str,
+            amount: str,
+            action: str,
+            sign_time: str,
+            sign_string: str,
+            error: str,
+            error_note: str,
+            *args,
+            **kwargs,
     ) -> dict:
         """
         :param click_trans_id:
@@ -173,20 +173,20 @@ class PyClickMerchantAPIView(APIView):
 
     @classmethod
     def complete(
-        cls,
-        click_trans_id: str,
-        service_id: str,
-        click_paydoc_id: str,
-        merchant_trans_id: str,
-        amount: str,
-        action: str,
-        sign_time: str,
-        sign_string: str,
-        error: str,
-        error_note: str,
-        merchant_prepare_id: str = None,
-        *args,
-        **kwargs,
+            cls,
+            click_trans_id: str,
+            service_id: str,
+            click_paydoc_id: str,
+            merchant_trans_id: str,
+            amount: str,
+            action: str,
+            sign_time: str,
+            sign_string: str,
+            error: str,
+            error_note: str,
+            merchant_prepare_id: str = None,
+            *args,
+            **kwargs,
     ) -> dict:
         """
         :param click_trans_id:
@@ -233,7 +233,13 @@ class PyClickMerchantAPIView(APIView):
     def generate_url(order_id, amount, return_url=None):
         service_id = settings.CLICK_SETTINGS["service_id"]
         merchant_id = settings.CLICK_SETTINGS["merchant_id"]
-        url = f"https://my.click.uz/services/pay?service_id={service_id}&merchant_id={merchant_id}&amount={amount}&transaction_param={order_id}"
+        url = f"https://my.click.uz/services/pay?service_id={service_id}&merchant_id={merchant_id}&merchant_user_id=44286&amount={amount}&transaction_param={order_id}"
         if return_url:
             url += f"&return_url={return_url}"
         return url
+
+# 5614 6816 0512 5446
+# 09/26
+
+
+# 97 744 4548
