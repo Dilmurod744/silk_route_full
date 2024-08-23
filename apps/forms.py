@@ -50,3 +50,13 @@ class TripSearchForm(forms.Form):
             raise forms.ValidationError('Return time must be after departure time.')
 
         return cleaned_data
+
+
+from django import forms
+from .models import ClickTransaction
+
+
+class ClickTransactionForm(forms.ModelForm):
+    class Meta:
+        model = ClickTransaction
+        fields = ['amount']

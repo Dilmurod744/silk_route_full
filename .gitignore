@@ -10,7 +10,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.idea
+.idea/
 # Django stuff:
 *.log
 local_settings.py

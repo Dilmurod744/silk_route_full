@@ -248,3 +248,11 @@ REST_FRAMEWORK = {
     # YOUR SETTINGS
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+CLICK_SETTINGS = {
+    "service_id": os.getenv("CLICK_SERVICE_ID"),
+    "merchant_id": os.getenv("CLICK_MERCHANT_ID"),
+    "secret_key": os.getenv("CLICK_SECRET_KEY"),
+    "merchant_user_id": os.getenv("CLICK_MERCHANT_USER_ID"),
+}
+
