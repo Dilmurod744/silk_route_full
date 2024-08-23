@@ -9,9 +9,10 @@ from apps.forms import ContactForm, BookingForm, ClickTransactionForm
 from apps.models import Packages, Booking
 from .models import ClickTransaction
 from .utils import PyClickMerchantAPIView
+from django.views.generic import ListView
+from .forms import TripSearchForm
 
 
-# Create your views here.
 class IndexView(ListView):
     model = Packages
     template_name = 'index.html'
@@ -89,10 +90,6 @@ class BookingFormView(FormView):
         context = super().get_context_data(**kwargs)
         context['packages'] = Packages.objects.all()
         return context
-
-
-from django.views.generic import ListView
-from .forms import TripSearchForm
 
 
 class PackageSearchView(ListView):
