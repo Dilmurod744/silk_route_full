@@ -140,7 +140,7 @@ class CreateClickTransactionView(CreateAPIView):
     def post(self, request, *args, **kwargs):
         amount = request.POST.get("amount")
         order = ClickTransaction.objects.create(amount=amount)
-        return_url = "http://127.0.0.1:8000/"
+        return_url = "http://silkroute.uz/"
         url = PyClickMerchantAPIView.generate_url(
             order_id=order.id, amount=str(amount), return_url=return_url
         )
