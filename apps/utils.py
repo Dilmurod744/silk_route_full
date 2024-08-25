@@ -238,4 +238,8 @@ class PyClickMerchantAPIView(APIView):
             url += f"&return_url={return_url}"
         return url
 
+# 5614 6816 0512 5446
+# 09/26
 
+
+# 97 744 4548

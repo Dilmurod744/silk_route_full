@@ -1,18 +1,24 @@
 from django.conf import settings
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import activate
-from django.views.generic import TemplateView, ListView, DetailView, FormView, CreateView
+from django.views.generic import TemplateView, ListView, DetailView, FormView
 
-from apps.forms import ContactForm, BookingForm, ClickTransactionForm
+from apps.forms import ContactForm, BookingForm
 from apps.models import Packages, Booking
+
+from django.http import JsonResponse
+from django.shortcuts import redirect
+from rest_framework.generics import CreateAPIView
+from rest_framework.views import APIView
+from . import serializers
+from .methods_merchant_api import Services
 from .models import ClickTransaction
+from .status import ORDER_FOUND, INVALID_AMOUNT, ORDER_NOT_FOUND
 from .utils import PyClickMerchantAPIView
-from django.views.generic import ListView
-from .forms import TripSearchForm
 
 
+# Create your views here.
 class IndexView(ListView):
     model = Packages
     template_name = 'index.html'
@@ -92,6 +98,10 @@ class BookingFormView(FormView):
         return context
 
 
+from django.views.generic import ListView
+from .forms import TripSearchForm
+
+
 class PackageSearchView(ListView):
     model = Packages
     template_name = 'blog.html'
@@ -124,20 +134,44 @@ class PackageSearchView(ListView):
         return context
 
 
-class CreateClickTransactionView(CreateView):
-    model = ClickTransaction
-    form_class = ClickTransactionForm
-    template_name = 'payment.html'  # Replace with your template name
+class CreateClickTransactionView(CreateAPIView):
+    serializer_class = serializers.ClickTransactionSerializer
 
-    def form_valid(self, form):
-        # Save the form to create the ClickTransaction object
-        self.object = form.save()
-
-        # Generate the return URL and redirect URL
+    def post(self, request, *args, **kwargs):
+        amount = request.POST.get("amount")
+        order = ClickTransaction.objects.create(amount=amount)
         return_url = "http://127.0.0.1:8000/"
         url = PyClickMerchantAPIView.generate_url(
-            order_id=self.object.id, amount=str(self.object.amount), return_url=return_url
+            order_id=order.id, amount=str(amount), return_url=return_url
         )
-
-        # Redirect to the generated URL
         return redirect(url)
+
+
+class TransactionCheck(PyClickMerchantAPIView):
+    @classmethod
+    def check_order(cls, order_id: str, amount: str):
+        if order_id:
+            try:
+                order = ClickTransaction.objects.get(id=order_id)
+                if int(amount) == order.amount:
+                    return ORDER_FOUND
+                else:
+                    return INVALID_AMOUNT
+            except ClickTransaction.DoesNotExist:
+                return ORDER_NOT_FOUND
+
+    @classmethod
+    def successfully_payment(cls, transaction: ClickTransaction):
+        """Эта функция вызывается после успешной оплаты"""
+        pass
+
+
+class ClickTransactionTestView(PyClickMerchantAPIView):
+    VALIDATE_CLASS = TransactionCheck
+
+
+class ClickMerchantServiceView(APIView):
+    def post(self, request, service_type, *args, **kwargs):
+        service = Services(request.POST, service_type)
+        response = service.api()
+        return JsonResponse(response)
