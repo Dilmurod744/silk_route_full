@@ -17,8 +17,8 @@ urlpatterns = [
     path("click-pay", PyClickMerchantAPIView.as_view()),
     path("process/click/transaction/create/", CreateClickTransactionView.as_view()),
     path("process/click/transaction/", ClickTransactionTestView.as_view()),
-    path("process/click/service/<service_type>", ClickMerchantServiceView.as_view()),
-    path('create-click-transaction/', CreateClickTransactionView.as_view(), name='create_click_transaction'),
+    # path("process/click/service/<service_type>", ClickMerchantServiceView.as_view()),
+    # path('create-click-transaction/', CreateClickTransactionView.as_view(), name='create_click_transaction'),
 
 ]
 
