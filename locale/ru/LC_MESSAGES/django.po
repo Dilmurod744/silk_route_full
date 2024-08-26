@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 20:09+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-08-26 17:38+0500\n"
+"PO-Revision-Date: 2024-08-26 16:40+0500\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,30 +19,384 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: templates/base/base.html:98 templates/blog.html:14
-msgid "Home"
-msgstr "Главная"
+#: apps/models.py:81
+msgid "Номер платежа в системе CLICK"
+msgstr ""
 
-#: templates/base/base.html:100 templates/base/base.html:143
-#: templates/index.html:100 templates/index.html:645
-msgid "About"
-msgstr "Об Узбекистане"
+#: apps/models.py:84
+msgid "Сумма оплаты (в сумах)"
+msgstr ""
 
-#: templates/base/base.html:102 templates/base/base.html:147
-#: templates/index.html:102 templates/index.html:387 templates/index.html:647
-msgid "Services"
-msgstr "Услуги"
+#: apps/models.py:90
+msgid "Выполняемое действие"
+msgstr ""
 
-#: templates/base/base.html:103 templates/index.html:103
-msgid "Tour Packages"
+#: apps/models.py:93
+msgid "Статус"
+msgstr ""
+
+#: apps/utils.py:90
+msgid "SIGN CHECK FAILED!"
+msgstr ""
+
+#: apps/utils.py:94
+msgid "Action not found"
+msgstr ""
+
+#: apps/utils.py:98
+msgid "Order not found"
+msgstr ""
+
+#: apps/utils.py:103
+msgid "Incorrect parameter amount"
+msgstr ""
+
+#: apps/utils.py:107
+msgid "Already paid"
+msgstr ""
+
+#: apps/utils.py:113
+msgid "Transaction not found"
+msgstr ""
+
+#: apps/utils.py:119
+msgid "Transaction cancelled"
+msgstr ""
+
+#: templates/about.html:148
+msgid "Welcome to Uzbekistan"
+msgstr "Добро пожаловать в Узбекистан"
+
+#: templates/about.html:149
+msgid "Explore the heart of Central Asia"
+msgstr "Ваш проводник в Центральную Азию"
+
+#: templates/about.html:156
+msgid ""
+"Uzbekistan: A Journey Through Silk Road Heritage, Cultural Riches, and "
+"Modern\n"
+"                Ambitions"
+msgstr ""
+"Узбекистан: Путешествие по наследию Шелкового пути, культурным богатствам и "
+"современным амбициям"
+
+#: templates/about.html:158
+msgid "Exploring Uzbekistan: Where Ancient Traditions Meet Vibrant Modernity"
+msgstr ""
+"Исследуя Узбекистан: Там, где древние традиции встречаются с яркой "
+"современностью."
+
+#: templates/about.html:160
+msgid ""
+"Uzbekistan, located in Central Asia, is a country rich in history, culture, "
+"and natural beauty. As\n"
+"                    one of the major hubs on the ancient Silk Road, "
+"Uzbekistan has been a crossroads of civilizations\n"
+"                    for centuries."
+msgstr ""
+"Узбекистан, расположенный в Центральной Азии, - это страна, богатая "
+"историей, культурой и природной красотой. Как один из главных узлов на "
+"древнем Шелковом пути, Узбекистан на протяжении веков был перекрестком "
+"цивилизаций."
+
+#: templates/about.html:164
+msgid "History"
+msgstr "История"
+
+#: templates/about.html:165
+msgid ""
+"Uzbekistan boasts a fascinating history that dates back thousands of years. "
+"It is home to ancient\n"
+"                    cities like Samarkand, Bukhara, and Khiva, which have "
+"long been centers of trade, culture, and\n"
+"                    learning. These cities feature stunning architectural "
+"masterpieces, including mosques, madrasas, and\n"
+"                    mausoleums that reflect the country's Islamic heritage."
+msgstr ""
+"Узбекистан может похвастаться увлекательной историей, насчитывающей тысячи "
+"лет. Здесь находятся древние города, такие как Самарканд, Бухара и Хива, "
+"которые на протяжении долгого времени были центрами торговли, культуры и "
+"образования. Эти города известны своими архитектурными шедеврами, включая "
+"мечети, медресе и мавзолеи, отражающие исламское наследие страны."
+
+#: templates/about.html:170
+msgid "Culture"
+msgstr "Культура"
+
+#: templates/about.html:171
+msgid ""
+"The culture of Uzbekistan is a vibrant blend of Persian, Turkic, and Russian "
+"influences. Traditional\n"
+"                    music, dance, and handicrafts are an integral part of "
+"Uzbek life. The country's cuisine is also\n"
+"                    renowned, with dishes like plov (a hearty rice dish), "
+"shashlik (grilled meat skewers), and various\n"
+"                    breads and pastries."
+msgstr ""
+"Культура Узбекистана – это яркое сочетание персидского, тюркского и русского "
+"влияний. Традиционная музыка, танцы и ремесла являются неотъемлемой частью "
+"жизни узбеков. Также известна кухня страны, в том числе блюда, такие как "
+"плов, шашлык и разнообразные хлеба и выпечки."
+
+#: templates/about.html:176
+msgid "Modern Uzbekistan"
+msgstr "Современный Узбекистан"
+
+#: templates/about.html:177
+msgid ""
+"Today, Uzbekistan is a country on the rise. Since gaining independence in "
+"1991, it has been working\n"
+"                    to modernize its economy and infrastructure while "
+"preserving its rich cultural heritage. Tashkent,\n"
+"                    the capital, is a modern city with a blend of Soviet-era "
+"architecture and contemporary\n"
+"                    developments."
+msgstr ""
+"Сегодня Узбекистан – это страна, находящаяся на подъеме. С момента обретения "
+"независимости в 1991 году он работает над модернизацией своей экономики и "
+"инфраструктуры, сохраняя при этом свое богатое культурное наследие. Ташкент, "
+"столица страны, представляет собой современный город, сочетающий советскую "
+"архитектуру с современными постройками."
+
+#: templates/about.html:182
+msgid "Tourism"
+msgstr "Туризм"
+
+#: templates/about.html:183
+msgid ""
+"Uzbekistan is becoming an increasingly popular tourist destination. Visitors "
+"are drawn to its\n"
+"                    historical sites, bustling bazaars, and warm "
+"hospitality. Whether exploring the ancient streets of\n"
+"                    Samarkand or enjoying the tranquility of the Uzbek "
+"countryside, there is much to discover in this\n"
+"                    captivating country."
+msgstr ""
+"Узбекистан становится все более популярным туристическим направлением. "
+"Посетителей привлекают его исторические памятники, шумные базары и "
+"гостеприимство местных жителей. Независимо от того, исследуете ли вы древние "
+"улицы Самарканда или наслаждаетесь спокойствием узбекской деревни, в этой "
+"очаровательной стране есть что открыть для себя."
+
+#: templates/about.html:191
+msgid "Tashkent: The Vibrant Capital"
+msgstr "Ташкент: Яркая столица"
+
+#: templates/about.html:192
+msgid ""
+"Tashkent, the capital city of Uzbekistan, is a bustling metropolis where "
+"modernity meets tradition."
+msgstr ""
+"Ташкент, столица Узбекистана, - это оживленный мегаполис, где современность "
+"встречается с традицией."
+
+#: templates/about.html:194
+msgid "Khast Imam Complex"
+msgstr "Хаст-Имам Комплекс"
+
+#: templates/about.html:194
+msgid ": A spiritual center housing the famous Quran of Caliph Uthman."
+msgstr ": Духовный центр, в котором хранится знаменитый Коран халифа Усмана."
+
+#: templates/about.html:196
+msgid "Chorsu Bazaar"
+msgstr "Чорсу Базар"
+
+#: templates/about.html:196
+msgid ""
+": A lively market offering a glimpse into local life with fresh\n"
+"                    produce, spices, and traditional crafts."
+msgstr ""
+": Оживленный рынок, предлагающий взглянуть на местную жизнь с его свежими "
+"продуктами, специями и традиционными ремеслами."
+
+#: templates/about.html:199
+msgid "Amir Timur Square"
+msgstr "Площадь Амира Тимура"
+
+#: templates/about.html:199
+msgid ""
+": A central landmark surrounded by important buildings and a\n"
+"                    statue of the great conqueror."
+msgstr ""
+": Центральная достопримечательность, окруженная важными зданиями и статуей "
+"великого завоевателя."
+
+#: templates/about.html:207
+msgid "Samarkand: The Jewel of the Silk Road"
+msgstr "Самарканд: Жемчужина Шелкового пути"
+
+#: templates/about.html:208
+msgid ""
+"Samarkand, one of the oldest inhabited cities in Central Asia, is a treasure "
+"trove of historical and\n"
+"                architectural wonders."
+msgstr ""
+"Самарканд, один из старейших населенных городов Центральной Азии, является "
+"сокровищницей исторических и архитектурных чудес."
+
+#: templates/about.html:211
+msgid "Registan Square"
+msgstr "Площадь Регистан"
+
+#: templates/about.html:211
+msgid ""
+": A magnificent ensemble of three madrasahs with stunning Islamic\n"
+"                    architecture."
+msgstr ""
+": Великолепный ансамбль из трех медресе с потрясающей исламской архитектурой."
+
+#: templates/about.html:214
+msgid "Shah-i-Zinda"
+msgstr "Шах-и-Зинда"
+
+#: templates/about.html:214
+msgid ": A necropolis with intricately decorated mausoleums."
+msgstr ": Некрополь с искусно украшенными мавзолеями."
+
+#: templates/about.html:215
+msgid "Bibi-Khanym Mosque"
+msgstr "Мечеть Биби-Ханым"
+
+#: templates/about.html:215
+msgid ""
+": Once one of the largest mosques in the Islamic world, it still\n"
+"                    impresses with its grandeur."
+msgstr ""
+": Когда-то одна из крупнейших мечетей в исламском мире, она до сих пор "
+"поражает своим величием."
+
+#: templates/about.html:223
+msgid "Bukhara: The Living Museum"
+msgstr "Бухара: Живой музей"
+
+#: templates/about.html:224
+msgid ""
+"Bukhara, a UNESCO World Heritage Site, is a city where history is alive in "
+"every corner."
+msgstr ""
+"Бухара, объект всемирного наследия ЮНЕСКО, - это город, в котором история "
+"оживает на каждом шагу."
+
+#: templates/about.html:226
+msgid "The Ark Fortress"
+msgstr "Крепость Арк"
+
+#: templates/about.html:226
+msgid ": A massive fortress that has been a symbol of power for centuries."
+msgstr ": Массивная крепость, символизировавшая власть на протяжении веков."
+
+#: templates/about.html:228
+msgid "Poi Kalyan Complex"
+msgstr "Комплекс Пои-Калян"
+
+#: templates/about.html:228
+msgid ""
+": Featuring the Kalyan Minaret, Kalyan Mosque, and Mir-i-Arab\n"
+"                    Madrasah."
+msgstr ": Включает минарет Калян, мечеть Калян и медресе Мир-и-Араб."
+
+#: templates/about.html:231
+msgid "Lyab-i Hauz"
+msgstr "Ляби-Хауз"
+
+#: templates/about.html:231
+msgid ""
+": A picturesque plaza centered around a pool, surrounded by historic\n"
+"                    buildings."
+msgstr ""
+": Живописная площадь, окруженная историческими зданиями вокруг бассейна."
+
+#: templates/about.html:238
+msgid "Khiva: The Ancient Oasis"
+msgstr "Хива: Древний оазис"
+
+#: templates/about.html:239
+msgid ""
+"Khiva, an ancient city located on the edge of the Kyzylkum Desert, is "
+"renowned for its well-preserved\n"
+"                architecture and historical significance."
+msgstr ""
+"Хива, древний город на краю пустыни Кызылкум, известен своей хорошо "
+"сохранившейся архитектурой и исторической значимостью."
+
+#: templates/about.html:242
+msgid "Ichan Kala"
+msgstr "Ичан-Кала"
+
+#: templates/about.html:242
+msgid ""
+": The historic inner town, a UNESCO World Heritage Site, featuring an\n"
+"                    impressive collection of mosques, minarets, and "
+"madrasahs."
+msgstr ""
+": Историческая внутренняя часть города, объект всемирного наследия ЮНЕСКО, с "
+"впечатляющей коллекцией мечетей, минаретов и медресе."
+
+#: templates/about.html:245
+msgid "Khiva Minaret"
+msgstr "Минарет Хивы"
+
+#: templates/about.html:245
+msgid ""
+": Known for its distinctive blue tile work and panoramic views of the\n"
+"                    city."
+msgstr ""
+": Известен своей характерной синей плиткой и панорамными видами на город."
+
+#: templates/about.html:248
+msgid "Pakhlavan Makhmud Mausoleum"
+msgstr "Мавзолей Пахлаван Махмуда"
+
+#: templates/about.html:248
+msgid ""
+": An important religious site, known for its intricate\n"
+"                    tile work and historical significance."
+msgstr ""
+": Важное религиозное место, известное своей сложной плиткой и исторической "
+"значимостью."
+
+#: templates/base/base.html:46
+msgid ""
+"\n"
+"                        Home"
+msgstr ""
+"\n"
+"Главная"
+
+#: templates/base/base.html:49
+msgid ""
+"\n"
+"                        About Us"
+msgstr ""
+"\n"
+"Об Узбекистане"
+
+#: templates/base/base.html:52
+msgid ""
+"\n"
+"                        Services"
+msgstr ""
+"\n"
+"Услуги"
+
+#: templates/base/base.html:54
+msgid ""
+"Tour\n"
+"                        Packages"
 msgstr "Туры"
 
-#: templates/base/base.html:104 templates/index.html:104
-msgid "Contact"
-msgstr "Контакты"
+#: templates/base/base.html:56
+msgid ""
+"\n"
+"                        Contact Us"
+msgstr ""
+"\n"
+"Связаться с нами"
 
-#: templates/base/base.html:121
+#: templates/base/base.html:173 templates/index.html:675
 msgid ""
 "Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys "
 "across the\n"
@@ -54,238 +408,255 @@ msgid ""
 "                or vibrant cultures, we are here to make your travel dreams "
 "a reality."
 msgstr ""
+"Добро пожаловать в туристическое агентство Silkroute – ваш проводник в "
+"незабываемые путешествия по всему миру.\n"
+"\n"
+"Названное в честь легендарного Шелкового пути, наше агентство воплощает дух "
+"исследований, приключений и культурного обмена. Независимо от того, ищете ли "
+"вы исторические чудеса, природную красоту или яркие культуры, мы здесь, "
+"чтобы воплотить ваши мечты о путешествиях в реальность."
 
-#: templates/base/base.html:126
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
+#: templates/base/base.html:178
 msgid ""
 "Follow\n"
 "                Us"
-msgstr "Главная"
+msgstr "Подписывайтесь на нас"
 
-#: templates/base/base.html:139
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
+#: templates/base/base.html:191 templates/index.html:693
 msgid ""
 "Our\n"
 "                Services"
-msgstr "Главная"
+msgstr ""
+"Наши\n"
+"услуги"
 
-#: templates/base/base.html:144
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
-msgid ""
-"\n"
-"                    Destination"
-msgstr "Главная"
-
-#: templates/base/base.html:149 templates/blog.html:12 templates/blog.html:16
-#: templates/index.html:428 templates/index.html:648
-#, fuzzy
-#| msgid "Tour Packages"
-msgid "Packages"
-msgstr "Туры"
-
-#: templates/base/base.html:150
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
-msgid ""
-"\n"
-"                    Guides"
-msgstr "Главная"
-
-#: templates/base/base.html:152
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
-msgid ""
-"\n"
-"                    Blog"
-msgstr "Главная"
-
-#: templates/base/base.html:166
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Home "
-msgid ""
-"Contact\n"
-"                Us"
-msgstr "Главная"
-
-#: templates/index.html:97
-msgid ""
-"\n"
-"                        Home "
-msgstr "Главная"
-
-#: templates/index.html:121 templates/index.html:131
-msgid "Tours & Travel"
-msgstr "Туры и путешествия"
-
-#: templates/index.html:122
-msgid "Your guide to Central Asia"
-msgstr "Ваш проводник в Центральную Азию"
-
-#: templates/index.html:123 templates/index.html:133
-msgid "Book Now"
-msgstr "Забронируйте сейчас"
-
-#: templates/index.html:132
-msgid "Discover the history of Central Asia with Silk Route"
-msgstr "Откройте всю историю Центральной Азии вместе с Silk Route"
-
-#: templates/index.html:222
-#, fuzzy
-#| msgid "About"
+#: templates/base/base.html:195 templates/index.html:52
+#: templates/index.html:697
 msgid "About Us"
 msgstr "Об Узбекистане"
 
-#: templates/index.html:223
-msgid "We Provide Best Tour Packages In Your Budget"
-msgstr "Мы предлагаем лучшие туристические пакеты в рамках вашего бюджета"
+#: templates/base/base.html:199 templates/index.html:55
+#: templates/index.html:701 templates/service.html:10 templates/service.html:14
+#: templates/service.html:77
+msgid "Services"
+msgstr "Услуги"
 
-#: templates/index.html:224
+#: templates/base/base.html:201 templates/blog.html:12 templates/blog.html:16
+#: templates/index.html:703
+msgid "Packages"
+msgstr "Туры"
+
+#: templates/base/base.html:204 templates/index.html:706
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        Contact Us"
 msgid ""
 "\n"
-"                        SILKROUTE invites you to a truly unique experience "
-"of the East, offering a deep dive into the traditions\n"
-"                        and history of thousands of years. We are ready to "
-"offer you an unforgettable holiday with a visit to the pearls\n"
-"                        of Central Asia, such as Samarkand, Bukhara and "
-"Khiva. Our professional team guarantees high-quality service and\n"
-"                        helps to understand our culture, history and "
-"geography. We offer a wide range of services:\n"
+"                    Contact Us"
+msgstr ""
+"\n"
+"Связаться с нами"
+
+#: templates/base/base.html:218
+msgid ""
+"Contact\n"
+"                Us"
+msgstr "Связаться с нами"
+
+#: templates/base/base.html:220 templates/index.html:725
+msgid "3 Block Chorsu, Shaykhantakhur district,Tashkent, Uzbekistan"
+msgstr "г.Ташкент, Шайхантахурский район, массив Чорсу , дом 3."
+
+#: templates/blog.html:14 templates/index.html:49 templates/service.html:12
+msgid "Home"
+msgstr "Главная"
+
+#: templates/index.html:57
+msgid "Tour Packages"
+msgstr "Туры"
+
+#: templates/index.html:59
+msgid "Contact"
+msgstr "Связаться с нами"
+
+#: templates/index.html:134
+msgid "Your guide to THE Central Asia"
+msgstr "Ваш проводник в Центральную Азию"
+
+#: templates/index.html:145
+msgid "Discover the history of Central Asia with Silk Route"
+msgstr "Откройте всю историю Центральной Азии вместе с Silk Route"
+
+#: templates/index.html:239
+msgid "We offer the best tour packages to fit your budget."
+msgstr "Мы предлагаем лучшие туристические пакеты в рамках вашего бюджета"
+
+#: templates/index.html:240
+msgid ""
+"\n"
+"                        SILK ROUTE DMC (Destination Management Company) "
+"welcomes you to an extraordinary journey through\n"
+"                        the East, delving deep into traditions and histories "
+"spanning thousands of years. We are\n"
+"                        committed to providing you with an unforgettable "
+"holiday, showcasing the jewels of Central Asia,\n"
+"                        such as Samarkand, Bukhara, and Khiva.\n"
+"\n"
+"                        Our professional team guarantees high-quality "
+"service and aims to enhance your understanding of\n"
+"                        our culture, history, and geography. We offer a wide "
+"range of services, including:\n"
 "                        <br>\n"
-"                        - Excursions to the cities\n"
-"                        of the Great Silk Road: Tashkent, Samarkand, "
-"Bukhara, Khiva and other historical places accompanied by experienced "
-"guides.\n"
+"                        - Guided tours to the cities of the Great Silk Road: "
+"Tashkent, Samarkand, Bukhara, Khiva, and\n"
+"                        other historical sites.\n"
 "                        <br>\n"
-"                        - Visa support. - Booking hotels of different levels "
-"of comfort. - Rent of vehicles of various classes.\n"
+"                        - Visa support.\n"
 "                        <br>\n"
-"                        - Booking air and train tickets. - Reception of "
-"children's and student groups for holidays.\n"
+"                        - Hotel booking with various levels of comfort.\n"
 "                        <br>\n"
-"                        - Participation in various festivals held in "
-"Uzbekistan.\n"
+"                        - Rental services for vehicles of different "
+"classes.\n"
 "                        <br>\n"
-"                        - Planning various tours: bike trips, photo tours, "
-"eco-tours and much more.\n"
+"                        - Booking of air and train tickets.\n"
+"                        <br><br>\n"
+"                        - Arrangements for children's and student groups.\n"
+"                        <br><br>\n"
+"                        - Participation in Uzbekistan's various festivals.\n"
+"                        <br><br>\n"
+"                        - Tailored tours encompassing bike trips, photo "
+"tours, eco-tours, and beyond.\n"
 "                        <br>\n"
-"                        Our guides are highly qualified, reliable and have "
-"all the necessary human qualities.\n"
-"                        They speak many foreign languages ​​- Turkish, "
-"Russian, English, French, German, Spanish, Italian,\n"
-"                        Japanese, etc. The excursions offered by our "
-"specialists are designed individually taking into account\n"
-"                        interesting historical facts, without adhering to "
-"standard templates. Our guides and translators are well\n"
-"                        acquainted with the history of the region, the "
-"culture and traditions of the local population.\n"
-"                        They will tell you legends and stories, immersing "
-"you in the magical atmosphere of the East.\n"
-"                        Join us and experience the unique beauty of "
-"Uzbekistan with SILKROUTE!\n"
+"                        Our guides are highly qualified, dependable, and "
+"possess essential personal qualities. They are\n"
+"                        proficient in various foreign languages, including "
+"Turkish, Russian, English, French, German,\n"
+"                        Spanish, Italian, Japanese, and more. The excursions "
+"designed by our specialists are\n"
+"                        individualized, incorporating fascinating historical "
+"facts without adhering to standard\n"
+"                        templates. Our guides and translators boast deep "
+"knowledge of the region's history, as well as\n"
+"                        the culture and traditions of the local populace. "
+"They will regale you with legends and stories,\n"
+"                        immersing you in the enchanting ambiance of the "
+"East. Join us and immerse yourself in the unique\n"
+"                        beauty of Uzbekistan with SILKROUTE!\n"
+"                        </span>\n"
 "                    "
 msgstr ""
-"TRAVEL EXPERT приглашает вас настоящими уникальными впечатлениями от "
-"Востока, предлагая глубокое погружение в традиции и историю тысячилетий.Мы "
-"готовы предложить вам незабываемый отдых с посещением жемчужин Средней Азии, "
-"таких как Самарканд, Бухара и Хива. Наша профессиональная команда "
-"гарантирует высококачественное обслуживание и помогает понять нашу культуру, "
-"историю и географию.Мы предлагаем широкий спектр услуг:- Экскурсии по "
-"городам Великого Шелкового Пути: Ташкент, Самарканд, Бухара, Хива и другие "
-"исторические места в сопровождении опытных гидов.- Визовую поддержку.- "
-"Бронирование гостиниц разного уровня комфорта.- Аренду транспортных средств "
-"различных классов.- Бронирование авиа и железнодорожных билетов.- Прием "
-"детских и студенческих групп на праздники.- Участие в различных фестивалях, "
-"проводимых в Узбекистане.- Планирование различных туров: вело-путешествия, "
-"фото-туры, экологические туры и многое другое.Наши гиды "
-"высококвалифицированы, надежны и обладают всеми необходимыми человеческими "
-"качествами. Они владеют множеством иностранных языков — турецким, русским, "
-"английским, французским, немецким, испанским, итальянским, японским и др."
-"Экскурсии, предлагаемые нашими специалистами, разработаны индивидуально с "
-"учетом интересных исторических фактов, не придерживаясь стандартных шаблонов."
-"Наши гиды и переводчики хорошо знакомы с историей региона, культурой и "
-"традициями местного населения. Они будут рассказывать вам легенды и истории, "
-"погружая в волшебную атмосферу Востока.Присоединяйтесь к нам и ощутите "
-"уникальные красоты Узбекистана вместе с TRAVEL EXPERT!"
+"\n"
+"SILK ROUTE – ваш путеводитель по Великому Шелковому пути. \n"
+"SILK ROUTE приглашает вас в необыкновенное путешествие по городам Средней "
+"Азии, погружаясь в традиции и историю, охватывающую тысячи лет. Мы стремимся "
+"предоставить вам незабываемый отдых, демонстрируя организацией туров по "
+"Узбекистану и по странам Средней Азии. Мы работаем как с индивидуальными "
+"туристами, так и с большими группами, гарантируя интересное и комфортное "
+"пребывание в странах Великого Шелкового пути. \n"
+"Наша профессиональная команда гарантирует высококачественное обслуживание и "
+"стремится улучшить ваше понимание нашей культуры, истории и географии. Мы "
+"предлагаем широкий спектр услуг, в том числе:\n"
+"- Экскурсии по городам Великого Шелкового пути: такие как Ташкент, "
+"Самарканд, Бухара, Хива и другие исторические города.\n"
+"- Визовая поддержка.\n"
+"- Бронирование отелей (различного уровня и комфорта).\n"
+"- Услуга по аренде автомобилей (разных классов).\n"
+"- Бронирование авиа и ж/д билетов.\n"
+"- Организация детских и студенческих групп.\n"
+"- Участие в различных фестивалях. (В городах Узбекистана).\n"
+"- Индивидуальные туры, включающие велопоездки, фототуры, экотуры и многое "
+"другое.\n"
+"\n"
+"Наши гиды высококвалифицированные, обладающие всеми необходимыми личными и "
+"профессиональными качествами. Они владеют несколькими иностранными языками, "
+"включая турецкий, русский, английский, индонезийский, французский, немецкий, "
+"испанский, итальянский, японский и другие. Предлагаемые Экскурсии, "
+"разработанные нашими специалистами, считаются уникальны, включают в себя "
+"увлекательные исторические факты, не придерживаясь стандартных шаблонов. "
+"Наши гиды и переводчики обладают глубоким знанием истории региона, а также "
+"культуры и традиций местного населения. Они побалуют вас легендами и "
+"историями, погружая в чарующую атмосферу Востока. Присоединяйтесь к нам и "
+"погрузитесь в неповторимую красоту Средней Азии вместе с SILKROUTE!"
 
-#: templates/index.html:277
+#: templates/index.html:304
 msgid "Competitive Pricing"
 msgstr "Конкурентное ценообразование"
 
-#: templates/index.html:278
+#: templates/index.html:305
 msgid ""
-"Get the best value for your money with our competitive pricing on hotel "
-"bookings.\n"
+"Get the best value for your money with our competitive pricing on\n"
+"                            hotel bookings.\n"
 "                            We work tirelessly to bring you the most "
-"attractive rates, ensuring you can enjoy your stay without breaking the bank."
+"attractive rates, ensuring you can enjoy your stay\n"
+"                            without breaking the bank."
 msgstr ""
 "Получите лучшее соотношение цены и качества с нашими конкурентоспособными "
 "ценамина бронирование отелей. Мы работаем не покладая рук, чтобы "
 "предоставить вам самые привлекательные цены,гарантируя, что вы сможете "
 "насладиться своим пребыванием, не опустошая свой кошелек."
 
-#: templates/index.html:290
+#: templates/index.html:319
 msgid "Best Services"
 msgstr "Лучшие услуги"
 
-#: templates/index.html:291
+#: templates/index.html:320
 msgid ""
-"Experience top-notch customer service from the moment you book until the end "
-"of your stay.\n"
+"Experience top-notch customer service from the moment you book\n"
+"                            until the end of your stay.\n"
 "                            Our dedicated support team is available 24/7 to "
-"assist with any questions or concerns, ensuring a seamless and enjoyable "
-"experience."
+"assist with any questions or concerns,\n"
+"                            ensuring a seamless and enjoyable experience."
 msgstr ""
 "Испытайте первоклассное обслуживание клиентов с момента бронирования и до "
 "конца вашего пребывания. Наша специализированная служба поддержки доступна "
 "24/7, чтобы помочь с любыми вопросами или проблемами, гарантируя безупречный "
 "и приятный опыт."
 
-#: templates/index.html:303
+#: templates/index.html:334
 msgid "Cultural and Historical Stays"
 msgstr "Культурные и исторические туры"
 
-#: templates/index.html:304
+#: templates/index.html:335
 msgid ""
-"Immerse yourself in history and culture with our unique accommodations "
-"located in historical buildings and cultural hotspots.\n"
+"Immerse yourself in history and culture with our unique\n"
+"                            accommodations located in historical buildings "
+"and cultural hotspots.\n"
 "                            Enjoy a stay in a Mausoleum, a Mosque, or a "
-"boutique hotel in the heart of a vibrant cultural district."
+"boutique hotel in the heart of a vibrant\n"
+"                            cultural district."
 msgstr ""
 "Погрузитесь в историю и культуру с нашими уникальными номерами, "
 "расположенными в исторических зданиях и культурных центрах. Насладитесь "
 "пребыванием в мавзолее, мечети или бутик-отеле в самом сердце оживленного "
 "культурного района."
 
-#: templates/index.html:388
+#: templates/index.html:420
+msgid ""
+"\n"
+"                Services"
+msgstr ""
+"\n"
+"Наши\n"
+"услуги"
+
+#: templates/index.html:422 templates/service.html:78
 msgid "Tours & Travel Services"
 msgstr "Туры и туристические услуги"
 
-#: templates/index.html:394
+#: templates/index.html:428 templates/service.html:84
 msgid "Travel Guide"
 msgstr "Наши путеводители"
 
-#: templates/index.html:395
+#: templates/index.html:429 templates/service.html:85
 msgid ""
-"Embark on an unforgettable journey with our expertly crafted travel guide,\n"
+"Embark on an unforgettable journey with our expertly crafted travel\n"
+"                        guide,\n"
 "                        designed to inspire and inform every traveler. From "
 "the bustling cities to serene landscapes,\n"
 "                        our guide covers the world's most breathtaking "
-"destinations with insider tips, must-see attractions, and hidden gems."
+"destinations with insider tips, must-see\n"
+"                        attractions, and hidden gems."
 msgstr ""
 "Отправьтесь в незабываемое путешествие с нашим искусно составленным "
 "путеводителем, призванным вдохновлять и информировать каждого "
@@ -293,16 +664,17 @@ msgstr ""
 "охватывает самые захватывающие места в мире с советами от знатоков, "
 "обязательными к посещению достопримечательностями и скрытыми жемчужинами."
 
-#: templates/index.html:403
+#: templates/index.html:439 templates/service.html:95
 msgid "Ticket Booking"
 msgstr "Бронирование билетов"
 
-#: templates/index.html:404
+#: templates/index.html:440 templates/service.html:96
 msgid ""
-"Secure your journey with ease using our seamless ticket booking service. "
-"Whether you're planning\n"
+"Secure your journey with ease using our seamless ticket booking\n"
+"                        service. Whether you're planning\n"
 "                        a quick getaway or a long-haul adventure, our "
-"platform offers a hassle-free experience to book flights,\n"
+"platform offers a hassle-free experience to book\n"
+"                        flights,\n"
 "                        trains, and bus tickets at the best prices."
 msgstr ""
 "Защитите свое путешествие с легкостью, используя наш безупречный сервис "
@@ -310,16 +682,17 @@ msgstr ""
 "приключение, наша платформа предлагает беспроблемный опыт бронирования "
 "билетов на самолеты, поезда и автобусы по лучшим ценам."
 
-#: templates/index.html:412
+#: templates/index.html:450 templates/service.html:106
 msgid "Hotel Booking"
 msgstr "Бронирование отеля"
 
-#: templates/index.html:413
+#: templates/index.html:451 templates/service.html:107
 msgid ""
-"Find the perfect place to rest and recharge with our comprehensive hotel "
-"booking service.\n"
+"Find the perfect place to rest and recharge with our comprehensive\n"
+"                        hotel booking service.\n"
 "                        From luxurious resorts to cozy bed and breakfasts, "
-"our platform offers a wide range of accommodations\n"
+"our platform offers a wide range of\n"
+"                        accommodations\n"
 "                        to suit every traveler's needs and preferences."
 msgstr ""
 "Найдите идеальное место для отдыха и восстановления сил с помощью нашей "
@@ -328,71 +701,1363 @@ msgstr ""
 "вариантов размещения, которые удовлетворят потребности и предпочтения "
 "каждого путешественника."
 
-#: templates/index.html:429
+#: templates/index.html:470
 msgid "Perfect Tour Packages"
 msgstr "Идеальные туристические пакеты"
 
-#: templates/index.html:630
-msgid ""
-"Welcome to Silkroute Travel Agency, your gateway to unforgettable journeys "
-"across the globe.\n"
-"                Named after the legendary Silk Road, our agency embodies the "
-"spirit of exploration,\n"
-"                adventure, and cultural exchange. Whether you're seeking "
-"historical wonders, natural beauty,\n"
-"                or vibrant cultures, we are here to make your travel dreams "
-"a reality."
-msgstr ""
-
-#: templates/index.html:634
+#: templates/index.html:681
 msgid "Follow Us"
 msgstr "Подписывайтесь на нас"
 
-#: templates/index.html:643
-#, fuzzy
-#| msgid "Services"
-msgid "Our Services"
-msgstr "Услуги"
-
-#: templates/index.html:646
-msgid "Destination"
-msgstr "Место назначения"
-
-#: templates/index.html:649
-msgid "Guides"
-msgstr "гиды"
-
-#: templates/index.html:650
-msgid "Blog"
-msgstr "Блог"
-
-#: templates/index.html:663
-#, fuzzy
-#| msgid "Contact"
+#: templates/index.html:722
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
-#, fuzzy
-#~| msgid "Home"
-#~ msgid "Home "
-#~ msgstr "Главная"
+#: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
+msgid "Messages"
+msgstr ""
 
+#: venv/lib/python3.10/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:32
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:33
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:34
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:104
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:760
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:165
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:176
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.10/site-packages/django/core/validators.py:259
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:267
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:279
+#: venv/lib/python3.10/site-packages/django/core/validators.py:306
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:286
+#: venv/lib/python3.10/site-packages/django/core/validators.py:307
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:298
+#: venv/lib/python3.10/site-packages/django/core/validators.py:305
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:341
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:347
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:382
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:391
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:400
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:407
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:439
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:457
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:480
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:355
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:394
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:482
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:487
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:492
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:563
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:624
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/base.py:1477
+#: venv/lib/python3.10/site-packages/django/forms/models.py:906
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/base.py:1479
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/constraints.py:20
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:133
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:134
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:135
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:136
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:140
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:179
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1155
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1158
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1208
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1210
+msgid "String (unlimited)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1314
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1415
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1419
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1554
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1423
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1550
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1558
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1563
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1690
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1692
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1853
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1857
 #, fuzzy
-#~| msgid ""
-#~| "\n"
-#~| "                        Home "
+#| msgid "Destination"
+msgid "Duration"
+msgstr "Место назначения"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1909
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1934
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2012
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2014
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2054
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2056
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2152
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2169
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2177
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2208
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2301
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2302
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2304
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2355
+msgid "Positive big integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2370
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2385
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2401
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2437
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2512
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2516
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2520
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2628
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2652
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2717
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2719
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/files.py:232
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/files.py:393
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/json.py:26
+msgid "A JSON object"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/json.py:28
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:939
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:941
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1235
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1292
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1294
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1342
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.10/site-packages/django/forms/boundfield.py:185
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:95
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:304
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:475
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1252
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:498
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1253
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:525
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:559
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:560
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:629
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:630
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:631
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:633
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:638
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:702
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:874
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:960
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1585
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:962
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1081
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1583
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1082
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1321
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1351
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.10/site-packages/django/forms/forms.py:94
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/forms.py:231
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:484
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:491
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:899
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:904
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:911
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:920
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1357
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1448
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1587
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:461
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:462
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:463
+msgid "Change"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:800
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:801
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:802
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:876
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:906
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:923
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:925
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:927
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:929
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:931
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:933
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:81
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:25
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:26
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:27
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:28
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:29
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:30
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:31
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:32
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:33
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:34
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:35
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:36
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:48
+#, fuzzy
+#| msgid "Contact"
+msgid "oct"
+msgstr "Контакты"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/text.py:123
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/text.py:323
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.10/site-packages/django/utils/text.py:342
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:135
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:349
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:68
+#: venv/lib/python3.10/site-packages/django/views/templates/directory_index.html:8
+#: venv/lib/python3.10/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:220
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:221
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:229
+msgid "Django Documentation"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:230
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:238
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:239
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:247
+msgid "Django Community"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:248
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django_ckeditor_5/views.py:77
+msgid "Page not found."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/django_ckeditor_5/widgets.py:43
+msgid "Check the correct settings.CKEDITOR_5_CONFIGS "
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1371
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1424
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1428
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1432
+msgid "No response body"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1396
+#: venv/lib/python3.10/site-packages/drf_spectacular/openapi.py:1450
+msgid "Unspecified response body"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/drf_spectacular/plumbing.py:484
+#, python-format
+msgid "Token-based authentication with required prefix \"%s\""
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/drf_spectacular/views.py:45
+msgid ""
+"\n"
+"    OpenApi3 schema for this API. Format can be selected via content "
+"negotiation.\n"
+"\n"
+"    - YAML: application/vnd.oai.openapi\n"
+"    - JSON: application/vnd.oai.openapi+json\n"
+"    "
+msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Об Узбекистане"
+
 #~ msgid ""
 #~ "\n"
-#~ "                        About"
-#~ msgstr "Главная"
+#~ "                    Destination"
+#~ msgstr ""
+#~ "\n"
+#~ "Место назначения"
+
+#~ msgid ""
+#~ "\n"
+#~ "                    Guides"
+#~ msgstr ""
+#~ "\n"
+#~ "гиды"
+
+#~ msgid ""
+#~ "\n"
+#~ "                    Blog"
+#~ msgstr ""
+#~ "\n"
+#~ "Блог"
+
+#~ msgid "Our Services"
+#~ msgstr "Услуги"
+
+#~ msgid "Destination"
+#~ msgstr "Место назначения"
+
+#~ msgid "Guides"
+#~ msgstr "гиды"
+
+#~ msgid "Blog"
+#~ msgstr "Блог"
+
+#~ msgid "Tours & Travel"
+#~ msgstr "Туры и путешествия"
+
+#~ msgid "Book Now"
+#~ msgstr "Забронируйте сейчас"
+
+#~ msgid ""
+#~ "Welcome to Silkroute Travel Agency, your gateway to unforgettable "
+#~ "journeys across the globe.\n"
+#~ "                Named after the legendary Silk Road, our agency embodies "
+#~ "the spirit of exploration,\n"
+#~ "                adventure, and cultural exchange. Whether you're seeking "
+#~ "historical wonders, natural beauty,\n"
+#~ "                or vibrant cultures, we are here to make your travel "
+#~ "dreams a reality."
+#~ msgstr ""
+#~ "Добро пожаловать в туристическое агентство Silkroute, ваш проводник в "
+#~ "незабываемые путешествия по всему миру. Названное в честь легендарного "
+#~ "Шелкового пути, наше агентство олицетворяет дух исследования, приключений "
+#~ "и культурного обмена. Независимо от того, ищете ли вы исторические "
+#~ "чудеса, природную красоту или яркие культуры, мы здесь, чтобы воплотить "
+#~ "ваши мечты о путешествиях в реальность."
 
 #, fuzzy
-#~| msgid ""
-#~| "\n"
-#~| "                        Home "
-#~ msgid ""
-#~ "Tour\n"
-#~ "                        Packages"
+#~ msgid "Home "
 #~ msgstr "Главная"
 
 #~ msgid "Discover Amazing Places With Us"

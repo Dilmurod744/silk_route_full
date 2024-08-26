@@ -47,7 +47,7 @@
                         Home{% endblocktrans %}</a>
                     <a href="{% url 'about' %}"
                        class="nav-item nav-link {% if request.path == 'about' %}active{% endif %}">{% blocktrans %}
-                        About{% endblocktrans %}</a>
+                        About Us{% endblocktrans %}</a>
                     <a href="{% url 'services' %}"
                        class="nav-item nav-link{% if request.path == 'services' %}active{% endif %}">{% blocktrans %}
                         Services{% endblocktrans %}</a>
@@ -89,7 +89,7 @@
                            href="https://www.instagram.com/silkroute_travel?igsh=M2tnMmtzc250cDdk">
                             <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
                         </a>
-                        <a class="text-primary px-3" href="https://t.me/">
+                        <a class="text-primary px-3" href="https://t.me/Silk_Route_Travel">
                             <i class="fab fa-telegram-plane" style="font-size: 1.5rem;"></i>
                         </a>
                         <div class="multilang-wrap ml-3">
@@ -192,17 +192,17 @@
                 Services{% endblocktrans %}</h5>
             <div class="d-flex flex-column justify-content-start">
                 <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>
-                    {% blocktrans %}About{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
-                    Destination{% endblocktrans %}</a>
+                    {% blocktrans %}About Us{% endblocktrans %}</a>
+{#                <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}#}
+{#                    Destination{% endblocktrans %}</a>#}
                 <a class="text-white-50 mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right mr-2"></i>
                     {% blocktrans %}Services{% endblocktrans %}</a>
                 <a class="text-white-50 mb-2" href="{% url 'packages' %}"><i class="fa fa-angle-right mr-2"></i>
                     {% blocktrans %}Packages{% endblocktrans %}</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
-                    Guides{% endblocktrans %}</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
-                    Blog{% endblocktrans %}</a>
+{#                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}#}
+{#                    Guides{% endblocktrans %}</a>#}
+                <a class="text-white-50" href="{% url 'contact' %}"><i class="fa fa-angle-right mr-2"></i>{% blocktrans %}
+                    Contact Us{% endblocktrans %}</a>
             </div>
         </div>
         {#        <div class="col-lg-3 col-md-6 mb-5">#}
@@ -217,10 +217,22 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">{% blocktrans %}Contact
                 Us{% endblocktrans %}</h5>
-            <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>{% blocktrans %}3 Block Chorsu, Shaykhantakhur district,Tashkent, Uzbekistan{% endblocktrans %}</p>
             <p><i class="fa fa-phone-alt mr-2"></i><a href="tel: +998908182022">+99890 8182022</a></p>
             <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@silkroute.uz">info@silkroute.uz</a></p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Payment</h6>
+            <div class="w-100">
+                <div class="input-group">
+                    {#                                            <input type="text" class="form-control border-light" style="padding: 25px;"#}
+                    {#                                                   placeholder="Your Email">#}
+                    <div class="input-group-append">
+                        <a href="https://silkroute.uz/create-click-transaction/">
+                            <img src="https://ajva-tour.uz/wp-content/uploads/2024/01/click.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+{#            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>#}
             {#            <div class="w-100">#}
             {#                <div class="input-group">#}
             {#                    <input type="text" class="form-control border-light" style="padding: 25px;"#}
