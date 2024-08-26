@@ -2,9 +2,9 @@ from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils.translation import activate
-from django.views.generic import TemplateView, ListView, DetailView, FormView
+from django.views.generic import TemplateView, ListView, DetailView, FormView, CreateView
 
-from apps.forms import ContactForm, BookingForm
+from apps.forms import ContactForm, BookingForm, ClickTransactionForm
 from apps.models import Packages, Booking
 
 from django.http import JsonResponse
@@ -134,7 +134,7 @@ class PackageSearchView(ListView):
         return context
 
 
-class CreateClickTransactionView(CreateAPIView):
+class CreateClickTransactionAPIView(CreateAPIView):
     serializer_class = serializers.ClickTransactionSerializer
 
     def post(self, request, *args, **kwargs):
@@ -175,3 +175,18 @@ class ClickMerchantServiceView(APIView):
         service = Services(request.POST, service_type)
         response = service.api()
         return JsonResponse(response)
+
+
+class CreateClickTransactionView(CreateView):
+    model = ClickTransaction
+    template_name = 'payment.html'
+    form_class = ClickTransactionForm
+
+    def post(self, request, *args, **kwargs):
+        amount = request.POST.get("amount")
+        order = ClickTransaction.objects.create(amount=amount)
+        return_url = "http://silkroute.uz/"
+        url = PyClickMerchantAPIView.generate_url(
+            order_id=order.id, amount=str(amount), return_url=return_url
+        )
+        return redirect(url)
